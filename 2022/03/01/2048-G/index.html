@@ -18,14 +18,14 @@
   
     <meta name="description" content="题目">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Treats for the Cows G&#x2F;S">
-<meta property="og:url" content="http://example.com/2022/03/01/Treats-for-the-Cows-G-S/index.html">
+<meta property="og:title" content="2048 G">
+<meta property="og:url" content="http://example.com/2022/03/01/2048-G/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="题目">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/img/post_cover/icpc.jpeg">
-<meta property="article:published_time" content="2022-03-01T12:58:20.000Z">
-<meta property="article:modified_time" content="2022-03-02T06:06:44.385Z">
+<meta property="article:published_time" content="2022-03-01T13:18:45.000Z">
+<meta property="article:modified_time" content="2022-03-02T06:05:06.026Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="算法">
 <meta property="article:tag" content="动态规划">
@@ -34,7 +34,7 @@
 <meta name="twitter:image" content="http://example.com/img/post_cover/icpc.jpeg">
   
   
-  <title>Treats for the Cows G/S - Hexo</title>
+  <title>2048 G - Hexo</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -190,7 +190,7 @@
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
-          <span id="subtitle" title="Treats for the Cows G/S">
+          <span id="subtitle" title="2048 G">
             
           </span>
         </div>
@@ -202,7 +202,7 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-03-01 20:58" pubdate>
+        <time datetime="2022-03-01 21:18" pubdate>
           2022年3月1日 晚上
         </time>
       </span>
@@ -214,7 +214,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          540 字
+          680 字
         
       </span>
     
@@ -225,7 +225,7 @@
         
         
         
-          5 分钟
+          6 分钟
         
       </span>
     
@@ -263,15 +263,15 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Treats for the Cows G/S</h1>
+            <h1 style="display: none">2048 G</h1>
             
             <div class="markdown-body">
               
               <p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2858">题目</a></p>
 <span id="more"></span>
 
-<p><img src="/img/post/TreatsfortheCowsGS.jpg" srcset="/img/loading.gif" lazyload></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;cstring&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;algorithm&gt;</span></span><br><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-type">const</span> <span class="hljs-type">int</span> N = <span class="hljs-number">2010</span>;<br><span class="hljs-type">int</span> a[N], f[N][N];<br><span class="hljs-type">int</span> n;<br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d&quot;</span>, &amp;n);<br>    <br>    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i ++) <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d&quot;</span>, &amp;a[i]);<br>    <br>    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> len = <span class="hljs-number">1</span>; len &lt;= n; len ++)<br>    &#123;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> l = <span class="hljs-number">1</span>; len + l - <span class="hljs-number">1</span> &lt;= n; l ++)<br>        &#123;<br>            <span class="hljs-type">int</span> r = len+l<span class="hljs-number">-1</span>;<br>            <span class="hljs-type">int</span> k = n-len+<span class="hljs-number">1</span>;<br>            <span class="hljs-keyword">if</span>(r-l&gt;<span class="hljs-number">0</span>)<br>            &#123;<br>                f[l][r] = <span class="hljs-built_in">max</span>(f[l+<span class="hljs-number">1</span>][r]+a[l]*k, f[l][r<span class="hljs-number">-1</span>]+a[r]*k);<br>            &#125;<span class="hljs-keyword">else</span><br>            &#123;<br>                f[l][r] = a[l]*k;<br>            &#125;<br>        &#125;<br>    &#125;<br>    <br>    cout&lt;&lt;f[<span class="hljs-number">1</span>][n]&lt;&lt;endl;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<p><img src="/img/post/2048G.jpg" srcset="/img/loading.gif" lazyload></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;cstring&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;algorithm&gt;</span></span><br><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-type">const</span> <span class="hljs-type">int</span> N = <span class="hljs-number">310</span>;<br><span class="hljs-type">int</span> a[N], f[N][N], g[N][N];<br><span class="hljs-type">int</span> n;<br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d&quot;</span>, &amp;n);<br>    <br>    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i ++) <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d&quot;</span>, &amp;a[i]), a[i + n] = a[i];<br>    <br>    <span class="hljs-built_in">memset</span>(f, <span class="hljs-number">-0x3f</span>, <span class="hljs-keyword">sizeof</span> f);<br>    <span class="hljs-type">int</span> maxx = <span class="hljs-number">-0x3f3f3f3f</span>;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> len = <span class="hljs-number">1</span>; len &lt;= n; len ++)<br>    &#123;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> l = <span class="hljs-number">1</span>; len + l - <span class="hljs-number">1</span> &lt;= n*<span class="hljs-number">2</span>; l ++)<br>        &#123;<br>            <span class="hljs-type">int</span> r = len + l - <span class="hljs-number">1</span>;<br>            <span class="hljs-keyword">if</span>(l == r)<br>            &#123;<br>                f[l][r] = a[l];<br>                <br>            &#125;<span class="hljs-keyword">else</span><br>            &#123;<br>                <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = l; i &lt; r; i ++)<br>                &#123;<br>                    <span class="hljs-keyword">if</span>(f[l][i] == f[i + <span class="hljs-number">1</span>][r])<br>                    &#123;<br>                        f[l][r] = <span class="hljs-built_in">max</span>(f[l][r], f[l][i]+<span class="hljs-number">1</span>);<br>                    &#125;<br>                &#125;<br>            &#125;<br>            maxx = <span class="hljs-built_in">max</span>(f[l][r], maxx);<br>        &#125;<br>    &#125;<br>    <br>    <br>    <br>    cout&lt;&lt;maxx&lt;&lt;endl;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
 
               
             </div>
@@ -334,8 +334,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Treats for the Cows G/S</div>
-      <div>http://example.com/2022/03/01/Treats-for-the-Cows-G-S/</div>
+      <div>2048 G</div>
+      <div>http://example.com/2022/03/01/2048-G/</div>
     </div>
     <div class="license-meta">
       
@@ -377,18 +377,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/03/01/2048-G/" title="2048 G">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">2048 G</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/02/27/%E7%82%AE%E5%85%B5%E9%98%B5%E5%9C%B0/" title="炮兵阵地">
-                        <span class="hidden-mobile">炮兵阵地</span>
+                      <a href="/2022/03/01/Treats-for-the-Cows-G-S/" title="Treats for the Cows G/S">
+                        <span class="hidden-mobile">Treats for the Cows G/S</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
