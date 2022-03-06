@@ -16,22 +16,20 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-    <meta name="description" content="1234567891011121314151617181920212223242526272829303132#include &lt;iostream&gt;#include &lt;cstring&gt;#include &lt;algorithm&gt;using namespace std;const int N &#x3D; 10010;int n;int a[N];bool st[N];int">
-<meta property="og:type" content="article">
-<meta property="og:title" content="交换瓶子">
-<meta property="og:url" content="http://example.com/2022/03/05/%E4%BA%A4%E6%8D%A2%E7%93%B6%E5%AD%90/index.html">
+    <meta property="og:type" content="article">
+<meta property="og:title" content="棋盘">
+<meta property="og:url" content="http://example.com/2022/03/06/%E6%A3%8B%E7%9B%98/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="1234567891011121314151617181920212223242526272829303132#include &lt;iostream&gt;#include &lt;cstring&gt;#include &lt;algorithm&gt;using namespace std;const int N &#x3D; 10010;int n;int a[N];bool st[N];int">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/img/post_cover/icpc.jpeg">
-<meta property="article:published_time" content="2022-03-05T01:29:21.000Z">
-<meta property="article:modified_time" content="2022-03-05T13:10:36.168Z">
+<meta property="article:published_time" content="2022-03-06T01:42:56.000Z">
+<meta property="article:modified_time" content="2022-03-06T01:42:57.000Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://example.com/img/post_cover/icpc.jpeg">
   
   
-  <title>交换瓶子 - Hexo</title>
+  <title>棋盘 - Hexo</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -187,7 +185,7 @@
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
-          <span id="subtitle" title="交换瓶子">
+          <span id="subtitle" title="棋盘">
             
           </span>
         </div>
@@ -199,8 +197,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-03-05 09:29" pubdate>
-          2022年3月5日 上午
+        <time datetime="2022-03-06 09:42" pubdate>
+          2022年3月6日 上午
         </time>
       </span>
     
@@ -211,7 +209,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          447 字
+          0 字
         
       </span>
     
@@ -222,7 +220,7 @@
         
         
         
-          4 分钟
+          1 分钟
         
       </span>
     
@@ -260,12 +258,11 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">交换瓶子</h1>
+            <h1 style="display: none">棋盘</h1>
             
             <div class="markdown-body">
               
-              <span id="more"></span>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;cstring&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;algorithm&gt;</span></span><br><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-type">const</span> <span class="hljs-type">int</span> N = <span class="hljs-number">10010</span>;<br><span class="hljs-type">int</span> n;<br><span class="hljs-type">int</span> a[N];<br><span class="hljs-type">bool</span> st[N];<br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d&quot;</span>, &amp;n);<br>    <br>    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i ++) <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d&quot;</span>, &amp;a[i]);<br>    <br>    <span class="hljs-type">int</span> res = <span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i ++)<br>    &#123;<br>        <span class="hljs-keyword">if</span>(!st[i])<br>        &#123;<br>            res ++;<br>            <br>            <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> j = i; !st[j]; j = a[j])<br>            &#123;<br>                st[j] = <span class="hljs-literal">true</span>;<br>            &#125;<br>        &#125;<br>    &#125;<br>    <br>    cout&lt;&lt;n-res&lt;&lt;endl;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+              
               
             </div>
             <hr/>
@@ -281,8 +278,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>交换瓶子</div>
-      <div>http://example.com/2022/03/05/%E4%BA%A4%E6%8D%A2%E7%93%B6%E5%AD%90/</div>
+      <div>棋盘</div>
+      <div>http://example.com/2022/03/06/%E6%A3%8B%E7%9B%98/</div>
     </div>
     <div class="license-meta">
       
@@ -294,7 +291,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年3月5日</div>
+          <div>2022年3月6日</div>
         </div>
       
       
@@ -324,9 +321,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/03/05/%E5%8C%BA%E9%97%B4%E9%80%89%E7%82%B9/" title="区间选点">
+                      <a href="/2022/03/06/%E9%BE%99%E8%99%8E%E6%96%97/" title="龙虎斗">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">区间选点</span>
+                        <span class="hidden-mobile">龙虎斗</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -334,8 +331,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/03/05/%E5%85%AB%E7%9B%AE%E9%B3%97/" title="八目鳗">
-                        <span class="hidden-mobile">八目鳗</span>
+                      <a href="/2022/03/05/%E5%8C%BA%E9%97%B4%E9%80%89%E7%82%B9/" title="区间选点">
+                        <span class="hidden-mobile">区间选点</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
