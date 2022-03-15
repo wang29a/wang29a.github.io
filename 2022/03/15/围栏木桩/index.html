@@ -16,22 +16,27 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-    <meta name="description" content="训练的过程中要注意如下问题：写解题报告解题报告是为同学们的复习提供方便，就像课堂笔记一样。如果不写，有许多做过的题都会忘记，那做题对能力的提高就很小。因为目的是备忘，所以对于自己独立完成的题目可以简写。对于通过参考网上答案来完成的题目要细写。细写的解题报告要包含三部分:问题描述、解决办法、代码。详细程度要达到在自己完全忘记这道题的情况下通过解题报告能够了解题意和解题过程。写了解题报告还不算完，记得">
+    <meta name="description" content="题目">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ACM">
-<meta property="og:url" content="http://example.com/2022/03/13/ACM/index.html">
+<meta property="og:title" content="围栏木桩">
+<meta property="og:url" content="http://example.com/2022/03/15/%E5%9B%B4%E6%A0%8F%E6%9C%A8%E6%A1%A9/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="训练的过程中要注意如下问题：写解题报告解题报告是为同学们的复习提供方便，就像课堂笔记一样。如果不写，有许多做过的题都会忘记，那做题对能力的提高就很小。因为目的是备忘，所以对于自己独立完成的题目可以简写。对于通过参考网上答案来完成的题目要细写。细写的解题报告要包含三部分:问题描述、解决办法、代码。详细程度要达到在自己完全忘记这道题的情况下通过解题报告能够了解题意和解题过程。写了解题报告还不算完，记得">
+<meta property="og:description" content="题目">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/img/post_cover/icpc.jpeg">
-<meta property="article:published_time" content="2022-03-13T12:18:42.000Z">
-<meta property="article:modified_time" content="2022-03-13T12:19:29.418Z">
+<meta property="article:published_time" content="2022-03-15T11:09:44.000Z">
+<meta property="article:modified_time" content="2022-03-15T11:15:49.688Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="算法">
+<meta property="article:tag" content="动态规划">
+<meta property="article:tag" content="线性DP">
+<meta property="article:tag" content="最长上升子序列">
+<meta property="article:tag" content="记录方案">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://example.com/img/post_cover/icpc.jpeg">
   
   
-  <title>ACM - Hexo</title>
+  <title>围栏木桩 - Hexo</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -187,7 +192,7 @@
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
-          <span id="subtitle" title="ACM">
+          <span id="subtitle" title="围栏木桩">
             
           </span>
         </div>
@@ -199,8 +204,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-03-13 20:18" pubdate>
-          2022年3月13日 晚上
+        <time datetime="2022-03-15 19:09" pubdate>
+          2022年3月15日 晚上
         </time>
       </span>
     
@@ -211,7 +216,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.1k 字
+          790 字
         
       </span>
     
@@ -222,7 +227,7 @@
         
         
         
-          9 分钟
+          7 分钟
         
       </span>
     
@@ -260,24 +265,74 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">ACM</h1>
+            <h1 style="display: none">围栏木桩</h1>
             
             <div class="markdown-body">
               
-              <h1 id="训练的过程中要注意如下问题："><a href="#训练的过程中要注意如下问题：" class="headerlink" title="训练的过程中要注意如下问题："></a>训练的过程中要注意如下问题：</h1><h2 id="写解题报告"><a href="#写解题报告" class="headerlink" title="写解题报告"></a>写解题报告</h2><p>解题报告是为同学们的复习提供方便，就像课堂笔记一样。如果不写，有许多做过的题都会忘记，那做题对能力的提高就很小。因为目的是备忘，所以对于自己独立完成的题目可以简写。对于通过参考网上答案来完成的题目要细写。细写的解题报告要包含三部分:问题描述、解决办法、代码。详细程度要达到在自己完全忘记这道题的情况下通过解题报告能够了解题意和解题过程。写了解题报告还不算完，记得定期复习。</p>
-<h2 id="写算法描述"><a href="#写算法描述" class="headerlink" title="写算法描述"></a>写算法描述</h2><p>做题的时候可能会接触到一些自己没学过的算法。在学习之后，需要用自己容易理解表达方式对算法进行描述，详细程度也是要让自己在完全忘记该算法的情况下能通过它迅速了解算法的原理或流程。同样记得定期复习。</p>
-<h2 id="独立思考"><a href="#独立思考" class="headerlink" title="独立思考"></a>独立思考</h2><p>做题可能遇到三种情况: 第一，独立思考就能完成，则略写解题报告。第二，需要上网找答案，但是并没有涉及到新算法，则详写解题报告。第三，需要上网找答案且涉及新算法，则详写解题报告，写算法总结。这三种情况中的后两种，即遇到不会做的题时，记得不要太急于上网找答案，先要充分地独立思考。这也是无数大牛强调的，对能力的提升有极大的帮助。但独立思考也要掌握分寸，思考时间过长会身心俱疲且浪费时间。</p>
-<h2 id="查找答案"><a href="#查找答案" class="headerlink" title="查找答案"></a>查找答案</h2><p>上述第三种情况可能直接看别人的解题报告并不能解决问题，因为解题报告通常只从算法的应用角度进行描述，并不描述算法本身。因此，要学习新算法还要上网搜索该算法的描述来进行学习，可以选择百度百科或者文库。</p>
-<h2 id="写代码"><a href="#写代码" class="headerlink" title="写代码"></a>写代码</h2><p>写代码的过程中注意变量的命名，函数的抽象，如果时间不是十分紧迫的话，一定要保证程序结构清晰可读性强。因为整洁的代码可以大大提高DEBUG的效率。有些细节的处理可以参考网上别人的代码，学习一些细节处理的小技巧。尤其是第一次学习某个算法的时候，一定要阅读多种别人对该算法实现的代码，选择最适合自己作为以后自己的实现方法。</p>
-<h2 id="整理模板"><a href="#整理模板" class="headerlink" title="整理模板"></a>整理模板</h2><p>这个的难度要求就比较大，要求同学们做题后从自己的代码中提取那些可复用的部分（别的题也可以用的代码）保存成模板以后使用。先说明一下原因，现场赛可以带纸质资料，总结的模板是可以在比赛中用到的，可提高打代吗的速度和正确性。而别人总结的模板也可以用，但有时会出现用起来不顺手或者功能不全等问题。因此，总结自己的模板是必要的。为了复用性可以对代码做适当修改。注意添加注释说明，详细程度要达到在自己忘了这个模板的用法的情况下能通过说明了解其用法。</p>
-<p>总体来说，初期的训练方法就是在OJ做题，通过做题来学习算法和提高各方面能力。当然有机会的要多在实战中锻炼自己。个人不建议单独看书学习算法，因为没有足够题目的强化，算法很容易忘记。</p>
+              <h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2362">题目</a></h1><span id="more"></span>
 
+<p>这题最长上升子序列的变形，需要记录方案数</p>
+<p>根据题解写出的代码</p>
+<p>就四组数据 可能会被HACK</p>
+<p><code>f[i] &lt; f[j] + 1</code>时 说明存在新的方案<code>g[i]</code>应该被更新成<code>g[j]</code></p>
+<p><code>f[i] == f[j] + 1</code>时 说明方案存在 累加</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;cstring&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;algorithm&gt;</span></span><br><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-type">const</span> <span class="hljs-type">int</span> N = <span class="hljs-number">2510</span>;<br><span class="hljs-type">int</span> n, m;<br><span class="hljs-type">int</span> a[N];<br><span class="hljs-type">int</span> f[N], g[N];<br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-type">int</span> m;<br>    cin&gt;&gt;m;<br>    <br>    <span class="hljs-keyword">while</span>(m --)<br>    &#123;<br>        cin&gt;&gt;n;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i ++) <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d&quot;</span>, &amp;a[i]);<br>        <span class="hljs-type">int</span> res = <span class="hljs-number">0</span>, cnt = <span class="hljs-number">0</span>;<br>        <br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i ++)<br>        &#123;<br>            f[i] = <span class="hljs-number">1</span>;<br>            g[i] = <span class="hljs-number">1</span>;<br>            <br>            <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> j = <span class="hljs-number">1</span>; j &lt; i; j ++)<br>            &#123;<br>                <span class="hljs-keyword">if</span>(a[i] &gt;= a[j])<br>                &#123;<br>                    <span class="hljs-keyword">if</span>(f[i] &lt; f[j] + <span class="hljs-number">1</span>)<br>                    &#123;<br>                        f[i] = f[j] + <span class="hljs-number">1</span>;<br>                        g[i] = g[j];<br>                    &#125;<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(f[i] == f[j] + <span class="hljs-number">1</span>)<br>                    &#123;<br>                        g[i] += g[j];<br>                    &#125;<br>                &#125;<br>            &#125;<br>            <span class="hljs-keyword">if</span>(res &lt;= f[i])<br>            &#123;<br>                res = f[i];<br>                cnt = g[i];<br>            &#125;<br>        &#125;<br>        <br>        cout&lt;&lt;res&lt;&lt;<span class="hljs-string">&quot; &quot;</span>&lt;&lt;cnt&lt;&lt;endl;<br>    &#125;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
               
             </div>
             <hr/>
             <div>
               <div class="post-metas my-3">
   
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" class="category-chain-item">动态规划</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/%E7%BA%BF%E6%80%A7DP/" class="category-chain-item">线性DP</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/%E7%BA%BF%E6%80%A7DP/%E6%9C%80%E9%95%BF%E4%B8%8A%E5%8D%87%E5%AD%90%E5%BA%8F%E5%88%97/" class="category-chain-item">最长上升子序列</a>
+  
+  
+
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E7%AE%97%E6%B3%95/">#算法</a>
+      
+        <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">#动态规划</a>
+      
+        <a href="/tags/%E7%BA%BF%E6%80%A7DP/">#线性DP</a>
+      
+        <a href="/tags/%E6%9C%80%E9%95%BF%E4%B8%8A%E5%8D%87%E5%AD%90%E5%BA%8F%E5%88%97/">#最长上升子序列</a>
+      
+        <a href="/tags/%E8%AE%B0%E5%BD%95%E6%96%B9%E6%A1%88/">#记录方案</a>
+      
+    </div>
   
 </div>
 
@@ -287,8 +342,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>ACM</div>
-      <div>http://example.com/2022/03/13/ACM/</div>
+      <div>围栏木桩</div>
+      <div>http://example.com/2022/03/15/%E5%9B%B4%E6%A0%8F%E6%9C%A8%E6%A1%A9/</div>
     </div>
     <div class="license-meta">
       
@@ -300,7 +355,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年3月13日</div>
+          <div>2022年3月15日</div>
         </div>
       
       
@@ -330,18 +385,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/03/15/%E5%9B%B4%E6%A0%8F%E6%9C%A8%E6%A1%A9/" title="围栏木桩">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">围栏木桩</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/03/13/Buying-Hay-S/" title="Buying Hay S">
-                        <span class="hidden-mobile">Buying Hay S</span>
+                      <a href="/2022/03/13/ACM/" title="ACM">
+                        <span class="hidden-mobile">ACM</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
