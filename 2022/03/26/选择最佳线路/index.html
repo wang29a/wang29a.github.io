@@ -16,22 +16,24 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-    <meta name="description" content="难点问题的转化和抽象 最短路计数需要满足拓扑序 使用dp的思想集合划分求最短路、计数 但一个图并不满足拓扑序，引入最短路树 最短路树不应该存在权值为零的环  BFS每个点只入队一次出队一次。 dijkstra（双端队列BFS） 每个点只作为最小值出队一次。 SPFA 一个点可以出队多次可能更新某个点的前序  以上的分析没必要😅 1234567891011121314151617181920212">
+    <meta name="description" content="思路反向建图把终点当作起点，求终点到起点的最短路 虚拟源点从集合的角度出发： 原问题：从一起点出发到达终点的最短路径 加入：从虚拟源点出发到达终点 是一致的 边的空间要开大一点点，因为虚拟源点多边了 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545">
 <meta property="og:type" content="article">
-<meta property="og:title" content="最短路">
-<meta property="og:url" content="http://example.com/2022/03/23/%E6%9C%80%E7%9F%AD%E8%B7%AF/index.html">
+<meta property="og:title" content="选择最佳线路">
+<meta property="og:url" content="http://example.com/2022/03/26/%E9%80%89%E6%8B%A9%E6%9C%80%E4%BD%B3%E7%BA%BF%E8%B7%AF/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="难点问题的转化和抽象 最短路计数需要满足拓扑序 使用dp的思想集合划分求最短路、计数 但一个图并不满足拓扑序，引入最短路树 最短路树不应该存在权值为零的环  BFS每个点只入队一次出队一次。 dijkstra（双端队列BFS） 每个点只作为最小值出队一次。 SPFA 一个点可以出队多次可能更新某个点的前序  以上的分析没必要😅 1234567891011121314151617181920212">
+<meta property="og:description" content="思路反向建图把终点当作起点，求终点到起点的最短路 虚拟源点从集合的角度出发： 原问题：从一起点出发到达终点的最短路径 加入：从虚拟源点出发到达终点 是一致的 边的空间要开大一点点，因为虚拟源点多边了 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/img/post_cover/icpc.jpeg">
-<meta property="article:published_time" content="2022-03-23T06:57:45.000Z">
-<meta property="article:modified_time" content="2022-03-26T07:01:21.382Z">
+<meta property="article:published_time" content="2022-03-26T00:39:17.000Z">
+<meta property="article:modified_time" content="2022-03-26T01:16:55.295Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="图论">
+<meta property="article:tag" content="单源最短路">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://example.com/img/post_cover/icpc.jpeg">
   
   
-  <title>最短路 - Hexo</title>
+  <title>选择最佳线路 - Hexo</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -187,7 +189,7 @@
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
-          <span id="subtitle" title="最短路">
+          <span id="subtitle" title="选择最佳线路">
             
           </span>
         </div>
@@ -199,8 +201,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-03-23 14:57" pubdate>
-          2022年3月23日 下午
+        <time datetime="2022-03-26 08:39" pubdate>
+          2022年3月26日 早上
         </time>
       </span>
     
@@ -260,29 +262,32 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">最短路</h1>
+            <h1 style="display: none">选择最佳线路</h1>
             
             <div class="markdown-body">
               
-              <h2 id="难点"><a href="#难点" class="headerlink" title="难点"></a>难点</h2><p>问题的转化和抽象</p>
-<h2 id="最短路计数"><a href="#最短路计数" class="headerlink" title="最短路计数"></a>最短路计数</h2><p>需要满足拓扑序</p>
-<p>使用dp的思想集合划分求最短路、计数</p>
-<p>但一个图并不满足拓扑序，引入最短路树</p>
-<p>最短路树不应该存在权值为零的环</p>
-<ul>
-<li>BFS每个点只入队一次出队一次。</li>
-<li>dijkstra（双端队列BFS） 每个点只作为最小值出队一次。</li>
-<li>SPFA 一个点可以出队多次可能更新某个点的前序</li>
-</ul>
-<p><del>以上的分析没必要😅</del></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;cstring&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;algorithm&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;queue&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;vector&gt;</span></span><br><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-keyword">typedef</span> pair&lt;<span class="hljs-type">int</span>, <span class="hljs-type">int</span>&gt; PII;<br><span class="hljs-type">const</span> <span class="hljs-type">int</span> N = <span class="hljs-number">100010</span>, M = <span class="hljs-number">4</span>*N, mod = <span class="hljs-number">100003</span>;<br><span class="hljs-type">int</span> h[N], e[M], ne[M], idx;<br><span class="hljs-type">int</span> dist[N];<br><span class="hljs-type">int</span> cnt[N];<br><span class="hljs-type">bool</span> st[N];<br><span class="hljs-type">int</span> n, m;<br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">add</span><span class="hljs-params">(<span class="hljs-type">int</span> a, <span class="hljs-type">int</span> b)</span></span><br><span class="hljs-function"></span>&#123;<br>    e[idx] = b, ne[idx] = h[a], h[a] = idx ++ ;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">dijkstra</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-built_in">memset</span>(dist, <span class="hljs-number">0x3f</span>, <span class="hljs-keyword">sizeof</span> dist);<br>    priority_queue&lt;PII, vector&lt;PII&gt;, greater&lt;PII&gt;&gt; heap;<br>    dist[<span class="hljs-number">1</span>] = <span class="hljs-number">0</span>;<br>    cnt[<span class="hljs-number">1</span>] = <span class="hljs-number">1</span>;<br>    heap.<span class="hljs-built_in">push</span>(&#123;<span class="hljs-number">0</span>, <span class="hljs-number">1</span>&#125;);<br>    <br>    <span class="hljs-keyword">while</span>(heap.<span class="hljs-built_in">size</span>())<br>    &#123;<br>        <span class="hljs-keyword">auto</span> t = heap.<span class="hljs-built_in">top</span>();<br>        heap.<span class="hljs-built_in">pop</span>();<br>        <br>        <span class="hljs-type">int</span> ver = t.second, distance = t.first;<br>        <span class="hljs-comment">// cout&lt;&lt;ver&lt;&lt;endl;</span><br>        <span class="hljs-keyword">if</span>(st[ver]) <span class="hljs-keyword">continue</span>;<br>        st[ver] = <span class="hljs-literal">true</span>;<br>        <br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = h[ver]; ~ i; i = ne[i])<br>        &#123;<br>            <span class="hljs-type">int</span> j = e[i];<br>            <span class="hljs-keyword">if</span>(dist[j] &gt; distance + <span class="hljs-number">1</span>)<br>            &#123;<br>                cnt[j] = cnt[ver] % mod;<br>                dist[j] = distance + <span class="hljs-number">1</span>;<br>                heap.<span class="hljs-built_in">push</span>(&#123;dist[j], j&#125;);<br>            &#125;<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(dist[j] == distance + <span class="hljs-number">1</span>)<br>            &#123;<br>                cnt[j] = (cnt[j] + cnt[ver]) % mod;<br>            &#125;<br>        &#125;<br>    &#125;<br>&#125;<br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d%d&quot;</span>, &amp;n, &amp;m);<br>    <span class="hljs-built_in">memset</span>(h, <span class="hljs-number">-1</span>, <span class="hljs-keyword">sizeof</span> h);<br>    <span class="hljs-keyword">while</span>(m --)<br>    &#123;<br>        <span class="hljs-type">int</span> a, b;<br>        <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d%d&quot;</span>, &amp;a, &amp;b);<br>        <span class="hljs-built_in">add</span>(a, b), <span class="hljs-built_in">add</span>(b, a);<br>    &#125;<br>        <br>    <span class="hljs-built_in">dijkstra</span>();<br>    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i ++)<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d\n&quot;</span>, cnt[i]);<br>    <br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
-
+              <h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><h2 id="反向建图"><a href="#反向建图" class="headerlink" title="反向建图"></a>反向建图</h2><p>把终点当作起点，求终点到起点的最短路</p>
+<h2 id="虚拟源点"><a href="#虚拟源点" class="headerlink" title="虚拟源点"></a>虚拟源点</h2><p>从集合的角度出发：</p>
+<p>原问题：从一起点出发到达终点的最短路径</p>
+<p>加入：从虚拟源点出发到达终点</p>
+<p>是一致的</p>
+<p>边的空间要开大一点点，因为虚拟源点多边了</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;cstring&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;algorithm&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;queue&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;vector&gt;</span></span><br><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-keyword">typedef</span> pair&lt;<span class="hljs-type">int</span>, <span class="hljs-type">int</span>&gt; PII;<br><span class="hljs-type">const</span> <span class="hljs-type">int</span> N = <span class="hljs-number">1010</span>, M = <span class="hljs-number">30010</span>;<br><span class="hljs-type">int</span> n, m, cnt;<br><span class="hljs-type">int</span> h[N], w[M], e[M] ,ne[M], idx;<br><span class="hljs-type">bool</span> st[N];<br><span class="hljs-type">int</span> dist[N];<br><span class="hljs-type">int</span> a[N];<br><span class="hljs-type">int</span> t;<br><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">add</span><span class="hljs-params">(<span class="hljs-type">int</span> a, <span class="hljs-type">int</span> b, <span class="hljs-type">int</span> c)</span></span><br><span class="hljs-function"></span>&#123;<br>    e[idx] = b, ne[idx] = h[a], w[idx] = c, h[a] = idx ++;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">dijkstra</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    <br>    <span class="hljs-built_in">memset</span>(dist, <span class="hljs-number">0x3f</span>, <span class="hljs-keyword">sizeof</span> dist);<br>    <span class="hljs-built_in">memset</span>(st, <span class="hljs-number">0</span>, <span class="hljs-keyword">sizeof</span> st);<br>    dist[<span class="hljs-number">0</span>] = <span class="hljs-number">0</span>;<br>    priority_queue&lt;PII, vector&lt;PII&gt;, greater&lt;PII&gt;&gt; heap;<br>    heap.<span class="hljs-built_in">push</span>(&#123;<span class="hljs-number">0</span>, <span class="hljs-number">0</span>&#125;);<br>    <span class="hljs-keyword">while</span>(heap.<span class="hljs-built_in">size</span>())<br>    &#123;<br>        <span class="hljs-keyword">auto</span> t = heap.<span class="hljs-built_in">top</span>();<br>        heap.<span class="hljs-built_in">pop</span>();<br>        <br>        <span class="hljs-type">int</span> ver = t.second, distance = t.first;<br>        <span class="hljs-keyword">if</span>(st[ver]) <span class="hljs-keyword">continue</span>;<br>        st[ver] = <span class="hljs-literal">true</span>;;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = h[ver]; ~ i; i = ne[i])<br>        &#123;<br>            <span class="hljs-type">int</span> j = e[i];<br>            <span class="hljs-keyword">if</span>(dist[j] &gt; distance + w[i])<br>            &#123;<br>                dist[j] = distance + w[i];<br>                heap.<span class="hljs-built_in">push</span>(&#123;dist[j], j&#125;);<br>            &#125;<br>        &#125;<br>    &#125;<br>&#125;<br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-keyword">while</span>(<span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d%d%d&quot;</span>, &amp;n, &amp;m, &amp;t) != EOF)<br>    &#123;<br>        <span class="hljs-built_in">memset</span>(h, <span class="hljs-number">-1</span>, <span class="hljs-keyword">sizeof</span> h);<br>        idx = <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">while</span>(m --)<br>        &#123;<br>            <span class="hljs-type">int</span> a, b, c;<br>            <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d%d%d&quot;</span>, &amp;a, &amp;b, &amp;c);<br>            <span class="hljs-built_in">add</span>(a, b, c);<br>        &#125;<br>        <br>        <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d&quot;</span>, &amp;cnt);<br>        <span class="hljs-keyword">while</span>(cnt --)<br>        &#123;<br>            <span class="hljs-type">int</span> a;<br>            <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d&quot;</span>, &amp;a);<br>            <span class="hljs-built_in">add</span>(<span class="hljs-number">0</span>, a, <span class="hljs-number">0</span>);<br>        &#125;<br>        <span class="hljs-built_in">dijkstra</span>();<br>        <span class="hljs-keyword">if</span>(dist[t] == <span class="hljs-number">0x3f3f3f3f</span>) <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;-1\n&quot;</span>);<br>        <span class="hljs-keyword">else</span> <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d\n&quot;</span>, dist[t]);<br>    &#125;<br>    <br>    <br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
               
             </div>
             <hr/>
             <div>
               <div class="post-metas my-3">
   
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E5%9B%BE%E8%AE%BA/">#图论</a>
+      
+        <a href="/tags/%E5%8D%95%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF/">#单源最短路</a>
+      
+    </div>
   
 </div>
 
@@ -292,8 +297,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>最短路</div>
-      <div>http://example.com/2022/03/23/%E6%9C%80%E7%9F%AD%E8%B7%AF/</div>
+      <div>选择最佳线路</div>
+      <div>http://example.com/2022/03/26/%E9%80%89%E6%8B%A9%E6%9C%80%E4%BD%B3%E7%BA%BF%E8%B7%AF/</div>
     </div>
     <div class="license-meta">
       
@@ -305,7 +310,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年3月23日</div>
+          <div>2022年3月26日</div>
         </div>
       
       
@@ -335,9 +340,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/03/26/%E9%80%89%E6%8B%A9%E6%9C%80%E4%BD%B3%E7%BA%BF%E8%B7%AF/" title="选择最佳线路">
+                      <a href="/2022/03/26/%E6%8B%AF%E6%95%91%E5%A4%A7%E5%85%B5%E7%91%9E%E6%81%A9/" title="拯救大兵瑞恩">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">选择最佳线路</span>
+                        <span class="hidden-mobile">拯救大兵瑞恩</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -345,8 +350,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/03/23/%E6%AC%A1%E7%9F%AD%E8%B7%AF/" title="次短路">
-                        <span class="hidden-mobile">次短路</span>
+                      <a href="/2022/03/23/%E6%9C%80%E7%9F%AD%E8%B7%AF/" title="最短路">
+                        <span class="hidden-mobile">最短路</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
