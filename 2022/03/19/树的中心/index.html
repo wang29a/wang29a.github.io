@@ -7,30 +7,30 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/google.png">
-  <link rel="icon" href="/img/google.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/involutionw/involutionw.github.io/img/google.png">
+  <link rel="icon" href="/involutionw/involutionw.github.io/img/google.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="author" content="John Doe">
+  <meta name="author" content="InvolutionZ">
   <meta name="keywords" content="">
   
     <meta name="description" content="题目">
 <meta property="og:type" content="article">
 <meta property="og:title" content="树的中心">
-<meta property="og:url" content="http://example.com/2022/03/19/%E6%A0%91%E7%9A%84%E4%B8%AD%E5%BF%83/index.html">
+<meta property="og:url" content="https://github.com/involutionw/involutionw.github.io/2022/03/19/%E6%A0%91%E7%9A%84%E4%B8%AD%E5%BF%83/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="题目">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/img/post_cover/icpc.jpeg">
+<meta property="og:image" content="https://github.com/involutionw/involutionw.github.io/img/post_cover/icpc.jpeg">
 <meta property="article:published_time" content="2022-03-19T00:01:16.000Z">
-<meta property="article:modified_time" content="2022-03-21T11:38:52.699Z">
-<meta property="article:author" content="John Doe">
+<meta property="article:modified_time" content="2022-04-05T12:28:26.863Z">
+<meta property="article:author" content="InvolutionZ">
 <meta property="article:tag" content="树形DP">
 <meta property="article:tag" content="换根DP">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://example.com/img/post_cover/icpc.jpeg">
+<meta name="twitter:image" content="https://github.com/involutionw/involutionw.github.io/img/post_cover/icpc.jpeg">
   
   
   <title>树的中心 - Hexo</title>
@@ -57,12 +57,12 @@
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
 
 
-<link  rel="stylesheet" href="/css/main.css" />
+<link  rel="stylesheet" href="/involutionw/involutionw.github.io/css/main.css" />
 
 
-  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  <link id="highlight-css" rel="stylesheet" href="/involutionw/involutionw.github.io/css/highlight.css" />
   
-    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+    <link id="highlight-css-dark" rel="stylesheet" href="/involutionw/involutionw.github.io/css/highlight-dark.css" />
   
 
 
@@ -70,10 +70,10 @@
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"0V6IIKHecn6Fm7YD7S4r61lNTDFVUVM2D7gVq1cU07m838qvHYvMPhf4wKN3P1K4-cn-n1","app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"github.com","root":"/involutionw/involutionw.github.io/","version":"1.8.14","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"0V6IIKHecn6Fm7YD7S4r61lNTDFVUVM2D7gVq1cU07m838qvHYvMPhf4wKN3P1K4-cn-n1","app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/involutionw/involutionw.github.io/local-search.xml"};
   </script>
-  <script  src="/js/utils.js" ></script>
-  <script  src="/js/color-schema.js" ></script>
+  <script  src="/involutionw/involutionw.github.io/js/utils.js" ></script>
+  <script  src="/involutionw/involutionw.github.io/js/color-schema.js" ></script>
 
   
 <meta name="generator" content="Hexo 6.0.0"></head>
@@ -88,7 +88,7 @@
 <div class="header-inner" style="height: 70vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
-    <a class="navbar-brand" href="/">
+    <a class="navbar-brand" href="/involutionw/involutionw.github.io/">
       <strong>Fluid</strong>
     </a>
 
@@ -107,7 +107,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/">
+              <a class="nav-link" href="/involutionw/involutionw.github.io/">
                 <i class="iconfont icon-home-fill"></i>
                 首页
               </a>
@@ -119,7 +119,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/archives/">
+              <a class="nav-link" href="/involutionw/involutionw.github.io/archives/">
                 <i class="iconfont icon-archive-fill"></i>
                 归档
               </a>
@@ -131,7 +131,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/categories/">
+              <a class="nav-link" href="/involutionw/involutionw.github.io/categories/">
                 <i class="iconfont icon-category-fill"></i>
                 分类
               </a>
@@ -143,7 +143,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/tags/">
+              <a class="nav-link" href="/involutionw/involutionw.github.io/tags/">
                 <i class="iconfont icon-tags-fill"></i>
                 标签
               </a>
@@ -155,7 +155,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/about/">
+              <a class="nav-link" href="/involutionw/involutionw.github.io/about/">
                 <i class="iconfont icon-user-fill"></i>
                 关于
               </a>
@@ -184,7 +184,7 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/post_banner/95490521_p0.png') no-repeat center center; background-size: cover;">
+     style="background: url('/involutionw/involutionw.github.io/img/post_banner/95490521_p0.png') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
@@ -269,7 +269,8 @@
               <p><a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/1075/">题目</a></p>
 <span id="more"></span>
 
-<p><img src="/img/post/%E6%A0%91%E7%9A%84%E4%B8%AD%E5%BF%83.jpg" srcset="/img/loading.gif" lazyload></p>
+<p><img src="/involutionw/involutionw.github.io/img/post/%E6%A0%91%E7%9A%84%E4%B8%AD%E5%BF%83.jpg" srcset="/involutionw/involutionw.github.io/img/loading.gif" lazyload></p>
+<h2 id="换根DP"><a href="#换根DP" class="headerlink" title="换根DP"></a>换根DP</h2><p>转换节点</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;cstring&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;algorithm&gt;</span></span><br><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-type">const</span> <span class="hljs-type">int</span> N = <span class="hljs-number">10010</span>, M = <span class="hljs-number">2</span> * N;<br><span class="hljs-type">int</span> h[N], w[M], e[M], ne[M], idx;<br><span class="hljs-type">int</span> n, m;<br><span class="hljs-type">int</span> d1[N], d2[N], p[N], up[N];<br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">add</span><span class="hljs-params">(<span class="hljs-type">int</span> a, <span class="hljs-type">int</span> b, <span class="hljs-type">int</span> c)</span></span><br><span class="hljs-function"></span>&#123;<br>    e[idx] = b, w[idx] = c, ne[idx] = h[a], h[a] = idx ++;<br>&#125;<br><br><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">dfs_d</span><span class="hljs-params">(<span class="hljs-type">int</span> u, <span class="hljs-type">int</span> fa)</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = h[u]; ~ i; i = ne[i])<br>    &#123;<br>        <span class="hljs-type">int</span> j = e[i];<br>        <span class="hljs-keyword">if</span>(j != fa)<br>        &#123;<br>            <span class="hljs-built_in">dfs_d</span>(j, u);<br>            <span class="hljs-type">int</span> d = d1[j] + w[i];<br>            <br>            <span class="hljs-keyword">if</span>(d &gt; d1[u])<br>            &#123;<br>                d2[u] = d1[u];<br>                d1[u] = d;<br>                p[u] = j;<br>            &#125;<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(d &gt; d2[u])<br>            &#123;<br>                d2[u] = d;<br>            &#125;<br>        &#125;<br>    &#125;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">dfs_u</span><span class="hljs-params">(<span class="hljs-type">int</span> u, <span class="hljs-type">int</span> fa)</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = h[u]; ~ i; i = ne[i])<br>    &#123;<br>        <span class="hljs-type">int</span> j = e[i];<br>        <span class="hljs-keyword">if</span>(j != fa)<br>        &#123;<br>            <span class="hljs-keyword">if</span>(j != p[u])<br>            &#123;<br>                up[j] = <span class="hljs-built_in">max</span>(up[u], d1[u]) + w[i];<br>            &#125;<span class="hljs-keyword">else</span><br>            &#123;<br>                up[j] = <span class="hljs-built_in">max</span>(up[u], d2[u]) + w[i];<br>            &#125;<br>            <br>            <span class="hljs-built_in">dfs_u</span>(j, u);<br>        &#125;<br>    &#125;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d&quot;</span>, &amp;n);<br>    <span class="hljs-built_in">memset</span>(h, <span class="hljs-number">-1</span>, <span class="hljs-keyword">sizeof</span> h);<br>    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt; n; i ++)<br>    &#123;<br>        <span class="hljs-type">int</span> a, b, c;<br>        <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d%d%d&quot;</span>, &amp;a, &amp;b, &amp;c);<br>        <span class="hljs-built_in">add</span>(a, b, c), <span class="hljs-built_in">add</span>(b, a, c);<br>    &#125;<br>    <br>    <br>    <span class="hljs-built_in">dfs_d</span>(<span class="hljs-number">1</span>, <span class="hljs-number">-1</span>);<br>    <br>    <span class="hljs-built_in">dfs_u</span>(<span class="hljs-number">1</span>, <span class="hljs-number">-1</span>);<br>    <br>    <span class="hljs-type">int</span> res = <span class="hljs-number">1e9</span>;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i ++)<br>    &#123;<br>        res = <span class="hljs-built_in">min</span>(res, <span class="hljs-built_in">max</span>(d1[i], up[i]));<br>    &#125;<br>    <br>    cout&lt;&lt;res&lt;&lt;endl;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
 
               
@@ -282,9 +283,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E6%A0%91%E5%BD%A2DP/">#树形DP</a>
+        <a href="/involutionw/involutionw.github.io/tags/%E6%A0%91%E5%BD%A2DP/">#树形DP</a>
       
-        <a href="/tags/%E6%8D%A2%E6%A0%B9DP/">#换根DP</a>
+        <a href="/involutionw/involutionw.github.io/tags/%E6%8D%A2%E6%A0%B9DP/">#换根DP</a>
       
     </div>
   
@@ -297,13 +298,13 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>树的中心</div>
-      <div>http://example.com/2022/03/19/%E6%A0%91%E7%9A%84%E4%B8%AD%E5%BF%83/</div>
+      <div>https://github.com/involutionw/involutionw.github.io/2022/03/19/%E6%A0%91%E7%9A%84%E4%B8%AD%E5%BF%83/</div>
     </div>
     <div class="license-meta">
       
         <div class="license-meta-item">
           <div>作者</div>
-          <div>John Doe</div>
+          <div>InvolutionZ</div>
         </div>
       
       
@@ -339,7 +340,7 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/03/19/%E4%BA%8C%E5%8F%89%E8%8B%B9%E6%9E%9C%E6%A0%91/" title="二叉苹果树">
+                      <a href="/involutionw/involutionw.github.io/2022/03/19/%E4%BA%8C%E5%8F%89%E8%8B%B9%E6%9E%9C%E6%A0%91/" title="二叉苹果树">
                         <i class="iconfont icon-arrowleft"></i>
                         <span class="hidden-mobile">二叉苹果树</span>
                         <span class="visible-mobile">上一篇</span>
@@ -349,7 +350,7 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/03/19/%E6%A0%91%E5%BD%A2DP/" title="树的直径">
+                      <a href="/involutionw/involutionw.github.io/2022/03/19/%E6%A0%91%E5%BD%A2DP/" title="树的直径">
                         <span class="hidden-mobile">树的直径</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
@@ -500,12 +501,12 @@
 
 <script  src="https://cdn.staticfile.org/jquery/3.6.0/jquery.min.js" ></script>
 <script  src="https://cdn.staticfile.org/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
-<script  src="/js/events.js" ></script>
-<script  src="/js/plugins.js" ></script>
+<script  src="/involutionw/involutionw.github.io/js/events.js" ></script>
+<script  src="/involutionw/involutionw.github.io/js/plugins.js" ></script>
 
 
   
-    <script  src="/js/img-lazyload.js" ></script>
+    <script  src="/involutionw/involutionw.github.io/js/img-lazyload.js" ></script>
   
 
 
@@ -677,9 +678,9 @@
 
   <script>Fluid.plugins.imageCaption();</script>
 
-  <script  src="/js/local-search.js" ></script>
+  <script  src="/involutionw/involutionw.github.io/js/local-search.js" ></script>
 
-  <script defer src="/js/leancloud.js" ></script>
+  <script defer src="/involutionw/involutionw.github.io/js/leancloud.js" ></script>
 
 
 
@@ -687,7 +688,7 @@
 
 <!-- 主题的启动项，将它保持在最底部 -->
 <!-- the boot of the theme, keep it at the bottom -->
-<script  src="/js/boot.js" ></script>
+<script  src="/involutionw/involutionw.github.io/js/boot.js" ></script>
 
 
   
