@@ -16,24 +16,23 @@
   <meta name="author" content="InvolutionZ">
   <meta name="keywords" content="">
   
-    <meta name="description" content="题目 数据量大需要进行优化，先从最暴力入手，O($n^4$)复杂度 优化一维循环，枚举上下界，使用双指针 12345678910111213141516171819202122232425262728293031323334353637383940414243#include &lt;iostream&gt;#include &lt;cstring&gt;#include &lt;algorith">
+    <meta name="description" content="题目  从剩余的数中找出第K小的数 删除一个数  a[i] &#x3D; 1 用树状数组维护其前缀和操作1为:找到一个最小的x使得sum(x) &#x3D; k，可以使用二分进行优化 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950#include &lt;iostream&amp;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="统计子矩阵">
-<meta property="og:url" content="https://involutionw.github.io/2022/04/13/%E7%BB%9F%E8%AE%A1%E5%AD%90%E7%9F%A9%E9%98%B5/index.html">
+<meta property="og:title" content="谜一样的牛">
+<meta property="og:url" content="https://involutionw.github.io/2022/04/14/%E8%B0%9C%E4%B8%80%E6%A0%B7%E7%9A%84%E7%89%9B/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="题目 数据量大需要进行优化，先从最暴力入手，O($n^4$)复杂度 优化一维循环，枚举上下界，使用双指针 12345678910111213141516171819202122232425262728293031323334353637383940414243#include &lt;iostream&gt;#include &lt;cstring&gt;#include &lt;algorith">
+<meta property="og:description" content="题目  从剩余的数中找出第K小的数 删除一个数  a[i] &#x3D; 1 用树状数组维护其前缀和操作1为:找到一个最小的x使得sum(x) &#x3D; k，可以使用二分进行优化 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950#include &lt;iostream&amp;">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://involutionw.github.io/img/post_cover/icpc.jpeg">
-<meta property="article:published_time" content="2022-04-13T12:26:25.000Z">
-<meta property="article:modified_time" content="2022-04-13T12:33:44.250Z">
+<meta property="article:published_time" content="2022-04-14T10:58:25.000Z">
+<meta property="article:modified_time" content="2022-04-14T11:27:23.576Z">
 <meta property="article:author" content="InvolutionZ">
-<meta property="article:tag" content="前缀和">
-<meta property="article:tag" content="双指针">
+<meta property="article:tag" content="树状数组">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://involutionw.github.io/img/post_cover/icpc.jpeg">
   
   
-  <title>统计子矩阵 - Hexo</title>
+  <title>谜一样的牛 - Hexo</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -189,7 +188,7 @@
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
-          <span id="subtitle" title="统计子矩阵">
+          <span id="subtitle" title="谜一样的牛">
             
           </span>
         </div>
@@ -201,8 +200,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-04-13 20:26" pubdate>
-          2022年4月13日 晚上
+        <time datetime="2022-04-14 18:58" pubdate>
+          2022年4月14日 晚上
         </time>
       </span>
     
@@ -213,7 +212,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          699 字
+          848 字
         
       </span>
     
@@ -224,7 +223,7 @@
         
         
         
-          6 分钟
+          8 分钟
         
       </span>
     
@@ -262,14 +261,17 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">统计子矩阵</h1>
+            <h1 style="display: none">谜一样的牛</h1>
             
             <div class="markdown-body">
               
-              <p><a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/4408/">题目</a></p>
-<p>数据量大需要进行优化，先从最暴力入手，O($n^4$)复杂度</p>
-<p>优化一维循环，枚举上下界，使用双指针<br><img src="/img/post/%E7%BB%9F%E8%AE%A1%E5%AD%90%E7%9F%A9%E9%98%B5.JPG" srcset="/img/loading.gif" lazyload></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;cstring&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;algorithm&gt;</span></span><br><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-keyword">typedef</span> <span class="hljs-type">long</span> <span class="hljs-type">long</span> LL;<br><br><span class="hljs-type">const</span> <span class="hljs-type">int</span> N = <span class="hljs-number">510</span>;<br><span class="hljs-type">int</span> a[N][N];<br><span class="hljs-type">int</span> n, m, k;<br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d%d%d&quot;</span>, &amp;n, &amp;m, &amp;k);<br>    <br>    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i ++)<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> j = <span class="hljs-number">1</span>; j &lt;= m; j ++)<br>        &#123;<br>            <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d&quot;</span>, &amp;a[i][j]);<br>            a[i][j] += a[i<span class="hljs-number">-1</span>][j];<br>        &#125;<br>    <br>    LL cnt = <span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> l = <span class="hljs-number">1</span>; l &lt;= n; l ++)<br>    &#123;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> r = l; r &lt;= n; r ++)<br>        &#123;<br>            <span class="hljs-type">int</span> sum = <span class="hljs-number">0</span>;<br>            <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>, j = <span class="hljs-number">1</span>; i &lt;= m; i ++)<br>            &#123;<br>                sum += a[r][i] - a[l<span class="hljs-number">-1</span>][i];<br>                <span class="hljs-keyword">while</span>(sum &gt; k)<br>                &#123;<br>                    sum -= a[r][j] - a[l<span class="hljs-number">-1</span>][j];<br>                    j ++;<br>                &#125;<br>                cnt += i-j+<span class="hljs-number">1</span>;<br>            &#125;<br>        &#125;<br>    &#125;<br>    <br>    cout&lt;&lt;cnt&lt;&lt;endl;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+              <p><a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/245/">题目</a></p>
+<ol>
+<li>从剩余的数中找出第K小的数</li>
+<li>删除一个数</li>
+</ol>
+<p><code>a[i] = 1</code> 用树状数组维护其前缀和<br>操作1为:<br>找到一个最小的x使得sum(x) &#x3D; k，可以使用二分进行优化</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;cstring&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;algorithm&gt;</span></span><br><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-type">const</span> <span class="hljs-type">int</span> N = <span class="hljs-number">100020</span>;<br><span class="hljs-type">int</span> n, m;<br><span class="hljs-type">int</span> s[N], a[N];<br><span class="hljs-type">int</span> ans[N];<br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">lowbit</span><span class="hljs-params">(<span class="hljs-type">int</span> x)</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-keyword">return</span> x &amp; -x;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">add</span><span class="hljs-params">(<span class="hljs-type">int</span> x, <span class="hljs-type">int</span> c)</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = x; i &lt;= n; i += <span class="hljs-built_in">lowbit</span>(i)) s[i] += c;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">sum</span><span class="hljs-params">(<span class="hljs-type">int</span> x)</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-type">int</span> res = <span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = x; i; i -= <span class="hljs-built_in">lowbit</span>(i)) res += s[i];<br>    <span class="hljs-keyword">return</span> res;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d&quot;</span>, &amp;n);<br>    <br>    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">2</span>; i &lt;= n; i ++) <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d&quot;</span>, &amp;a[i]);<br>    <br>    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i ++) <span class="hljs-built_in">add</span>(i, <span class="hljs-number">1</span>);<br>    <br>    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = n; i &gt;= <span class="hljs-number">1</span>; i --)<br>    &#123;<br>        <span class="hljs-type">int</span> l = <span class="hljs-number">1</span>, r = n;<br>        <span class="hljs-keyword">while</span>(l &lt; r)<br>        &#123;<br>            <span class="hljs-type">int</span> mid = (l+r)&gt;&gt;<span class="hljs-number">1</span>;<br>            <span class="hljs-keyword">if</span>(<span class="hljs-built_in">sum</span>(mid) &gt;= a[i]+<span class="hljs-number">1</span>) r = mid;<br>            <span class="hljs-keyword">else</span> l = mid+<span class="hljs-number">1</span>;<br>        &#125;<br>        ans[i] = l;<br>        <span class="hljs-built_in">add</span>(l, <span class="hljs-number">-1</span>);<br>    &#125;<br>    <br>    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i ++) <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d\n&quot;</span>, ans[i]);<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
 
               
             </div>
@@ -281,9 +283,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E5%89%8D%E7%BC%80%E5%92%8C/">#前缀和</a>
-      
-        <a href="/tags/%E5%8F%8C%E6%8C%87%E9%92%88/">#双指针</a>
+        <a href="/tags/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/">#树状数组</a>
       
     </div>
   
@@ -295,8 +295,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>统计子矩阵</div>
-      <div>https://involutionw.github.io/2022/04/13/%E7%BB%9F%E8%AE%A1%E5%AD%90%E7%9F%A9%E9%98%B5/</div>
+      <div>谜一样的牛</div>
+      <div>https://involutionw.github.io/2022/04/14/%E8%B0%9C%E4%B8%80%E6%A0%B7%E7%9A%84%E7%89%9B/</div>
     </div>
     <div class="license-meta">
       
@@ -308,7 +308,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年4月13日</div>
+          <div>2022年4月14日</div>
         </div>
       
       
@@ -338,18 +338,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/04/14/%E8%B0%9C%E4%B8%80%E6%A0%B7%E7%9A%84%E7%89%9B/" title="谜一样的牛">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">谜一样的牛</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/04/13/%E7%A7%AF%E6%9C%A8%E7%94%BB/" title="积木画">
-                        <span class="hidden-mobile">积木画</span>
+                      <a href="/2022/04/13/%E7%BB%9F%E8%AE%A1%E5%AD%90%E7%9F%A9%E9%98%B5/" title="统计子矩阵">
+                        <span class="hidden-mobile">统计子矩阵</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
