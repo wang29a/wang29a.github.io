@@ -25,9 +25,10 @@
 <meta name="twitter:card" content="summary_large_image">
   
   
+  
   <title>分类 - Hexo</title>
 
-  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
 
 
@@ -56,7 +57,13 @@
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"involutionw.github.io","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"0V6IIKHecn6Fm7YD7S4r61lNTDFVUVM2D7gVq1cU07m838qvHYvMPhf4wKN3P1K4-cn-n1","app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"involutionw.github.io","root":"/","version":"1.9.0","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
@@ -175,9 +182,9 @@
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
-          <span id="subtitle" title="分类">
-            
-          </span>
+          
+            <span id="subtitle" data-typed-text="分类"></span>
+          
         </div>
 
         
@@ -208,7 +215,6 @@
 
 
 <div class="category-list">
-  
   
   
     
@@ -260,14 +266,12 @@
   </div>
 
           
-          
-  
   
     
     
     
-    <div class="category row nomargin-x">
-      <a class="category-item collapsed
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="动态规划"
         id="heading-8c05890ac8f93d0195f884f1ff4656ec" role="tab" data-toggle="collapse" href="#collapse-8c05890ac8f93d0195f884f1ff4656ec"
         aria-expanded="false"
@@ -321,14 +325,12 @@
   </div>
 
           
-          
-  
   
     
     
     
-    <div class="category row nomargin-x">
-      <a class="category-item collapsed
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="区间DP"
         id="heading-9cba7d06152a7c0537516a4957520e25" role="tab" data-toggle="collapse" href="#collapse-9cba7d06152a7c0537516a4957520e25"
         aria-expanded="false"
@@ -423,8 +425,8 @@
     
     
     
-    <div class="category row nomargin-x">
-      <a class="category-item collapsed
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="背包问题"
         id="heading-d39a003f20270fe3dbdf5b3f4b0b016c" role="tab" data-toggle="collapse" href="#collapse-d39a003f20270fe3dbdf5b3f4b0b016c"
         aria-expanded="false"
@@ -478,14 +480,12 @@
   </div>
 
           
-          
-  
   
     
     
     
-    <div class="category row nomargin-x">
-      <a class="category-item collapsed
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="背包求方案数"
         id="heading-b732a801a48a5c11aaea6b684e91d7e7" role="tab" data-toggle="collapse" href="#collapse-b732a801a48a5c11aaea6b684e91d7e7"
         aria-expanded="false"
@@ -535,8 +535,8 @@
     
     
     
-    <div class="category row nomargin-x">
-      <a class="category-item collapsed
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="完全背包"
         id="heading-a4a22d4b9163563a6c92770a67ea72b6" role="tab" data-toggle="collapse" href="#collapse-a4a22d4b9163563a6c92770a67ea72b6"
         aria-expanded="false"
@@ -581,8 +581,8 @@
     
     
     
-    <div class="category row nomargin-x">
-      <a class="category-item collapsed
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="树形DP"
         id="heading-a80cdfb459801ca0c94a66d6f878b84f" role="tab" data-toggle="collapse" href="#collapse-a80cdfb459801ca0c94a66d6f878b84f"
         aria-expanded="false"
@@ -645,14 +645,12 @@
   </div>
 
           
-          
-  
   
     
     
     
-    <div class="category row nomargin-x">
-      <a class="category-item collapsed
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="背包问题"
         id="heading-d39a003f20270fe3dbdf5b3f4b0b016c" role="tab" data-toggle="collapse" href="#collapse-d39a003f20270fe3dbdf5b3f4b0b016c"
         aria-expanded="false"
@@ -697,8 +695,8 @@
     
     
     
-    <div class="category row nomargin-x">
-      <a class="category-item collapsed
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="状态压缩DP"
         id="heading-d6eac9da3175fa6afe157ead8f57c6e7" role="tab" data-toggle="collapse" href="#collapse-d6eac9da3175fa6afe157ead8f57c6e7"
         aria-expanded="false"
@@ -766,8 +764,8 @@
     
     
     
-    <div class="category row nomargin-x">
-      <a class="category-item collapsed
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="线性DP"
         id="heading-4c5fd0ec0f344c09bb04ab64ff8f0886" role="tab" data-toggle="collapse" href="#collapse-4c5fd0ec0f344c09bb04ab64ff8f0886"
         aria-expanded="false"
@@ -803,14 +801,12 @@
   </div>
 
           
-          
-  
   
     
     
     
-    <div class="category row nomargin-x">
-      <a class="category-item collapsed
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="最长上升子序列"
         id="heading-c4d17298574264e39835a1b2bc506fec" role="tab" data-toggle="collapse" href="#collapse-c4d17298574264e39835a1b2bc506fec"
         aria-expanded="false"
@@ -846,14 +842,12 @@
   </div>
 
           
-          
-  
   
     
     
     
-    <div class="category row nomargin-x">
-      <a class="category-item collapsed
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="记录方案"
         id="heading-2d429f54bc4f96c72017716e4b3d70ec" role="tab" data-toggle="collapse" href="#collapse-2d429f54bc4f96c72017716e4b3d70ec"
         aria-expanded="false"
@@ -880,14 +874,12 @@
   </div>
 
           
-          
-  
   
     
     
     
-    <div class="category row nomargin-x">
-      <a class="category-item collapsed
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="最长不下降子序列"
         id="heading-4cef9ceca03237c79f5125c02d6ddaea" role="tab" data-toggle="collapse" href="#collapse-4cef9ceca03237c79f5125c02d6ddaea"
         aria-expanded="false"
@@ -940,8 +932,8 @@
     
     
     
-    <div class="category row nomargin-x">
-      <a class="category-item collapsed
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="状态机模型"
         id="heading-30b5e1c479ecb8123277d1cb0db2b8d0" role="tab" data-toggle="collapse" href="#collapse-30b5e1c479ecb8123277d1cb0db2b8d0"
         aria-expanded="false"
@@ -991,50 +983,8 @@
     
     
     
-    <div class="category row nomargin-x">
-      <a class="category-item collapsed
-          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="最大上升子序列和"
-        id="heading-58d79049f194b9ecc5670ec9dd77511a" role="tab" data-toggle="collapse" href="#collapse-58d79049f194b9ecc5670ec9dd77511a"
-        aria-expanded="false"
-      >
-        最大上升子序列和
-        <span class="list-group-count"></span>
-        <i class="iconfont icon-arrowright"></i>
-      </a>
-      
-        <a href="/categories/%E7%AE%97%E6%B3%95/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/%E6%9C%80%E5%A4%A7%E4%B8%8A%E5%8D%87%E5%AD%90%E5%BA%8F%E5%88%97%E5%92%8C/" class="category-count col-2 col-md-1 col-xm-1">
-          <i class="iconfont icon-articles"></i>
-          <span>1</span>
-        </a>
-      
-      <div class="category-collapse collapse " id="collapse-58d79049f194b9ecc5670ec9dd77511a"
-           role="tabpanel" aria-labelledby="heading-58d79049f194b9ecc5670ec9dd77511a">
-        
-        
-          
-  <div class="category-post-list">
-    
-    
-      
-      
-        <a href="/2022/02/16/%E6%9C%80%E5%A4%A7%E4%B8%8A%E5%8D%87%E5%AD%90%E5%BA%8F%E5%88%97%E5%92%8C/" title="最大上升子序列和"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">最大上升子序列和</span>
-        </a>
-      
-    
-  </div>
-
-        
-      </div>
-    </div>
-  
-    
-    
-    
-    <div class="category row nomargin-x">
-      <a class="category-item collapsed
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="单调队列优化"
         id="heading-36d7351a61cbe4ca2d384a8fa4b0e65f" role="tab" data-toggle="collapse" href="#collapse-36d7351a61cbe4ca2d384a8fa4b0e65f"
         aria-expanded="false"
@@ -1072,6 +1022,48 @@
       </div>
     </div>
   
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="最大上升子序列和"
+        id="heading-58d79049f194b9ecc5670ec9dd77511a" role="tab" data-toggle="collapse" href="#collapse-58d79049f194b9ecc5670ec9dd77511a"
+        aria-expanded="false"
+      >
+        最大上升子序列和
+        <span class="list-group-count"></span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+        <a href="/categories/%E7%AE%97%E6%B3%95/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/%E6%9C%80%E5%A4%A7%E4%B8%8A%E5%8D%87%E5%AD%90%E5%BA%8F%E5%88%97%E5%92%8C/" class="category-count col-2 col-md-1 col-xm-1">
+          <i class="iconfont icon-articles"></i>
+          <span>1</span>
+        </a>
+      
+      <div class="category-collapse collapse " id="collapse-58d79049f194b9ecc5670ec9dd77511a"
+           role="tabpanel" aria-labelledby="heading-58d79049f194b9ecc5670ec9dd77511a">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/2022/02/16/%E6%9C%80%E5%A4%A7%E4%B8%8A%E5%8D%87%E5%AD%90%E5%BA%8F%E5%88%97%E5%92%8C/" title="最大上升子序列和"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">最大上升子序列和</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
         
       </div>
     </div>
@@ -1079,8 +1071,8 @@
     
     
     
-    <div class="category row nomargin-x">
-      <a class="category-item collapsed
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="图论"
         id="heading-d08f425073cca127d4a21b6d39583634" role="tab" data-toggle="collapse" href="#collapse-d08f425073cca127d4a21b6d39583634"
         aria-expanded="false"
@@ -1107,14 +1099,12 @@
   </div>
 
           
-          
-  
   
     
     
     
-    <div class="category row nomargin-x">
-      <a class="category-item collapsed
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="最短路"
         id="heading-cfcee2fa81cc4b4cd36cc0547985a32e" role="tab" data-toggle="collapse" href="#collapse-cfcee2fa81cc4b4cd36cc0547985a32e"
         aria-expanded="false"
@@ -1141,14 +1131,12 @@
   </div>
 
           
-          
-  
   
     
     
     
-    <div class="category row nomargin-x">
-      <a class="category-item collapsed
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Floyd"
         id="heading-24aab28c6740a83da76434c8104a4604" role="tab" data-toggle="collapse" href="#collapse-24aab28c6740a83da76434c8104a4604"
         aria-expanded="false"
@@ -1193,8 +1181,8 @@
     
     
     
-    <div class="category row nomargin-x">
-      <a class="category-item collapsed
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="差分约束"
         id="heading-a3d69475d93135f46ed0acc2c7e0c890" role="tab" data-toggle="collapse" href="#collapse-a3d69475d93135f46ed0acc2c7e0c890"
         aria-expanded="false"
@@ -1235,8 +1223,8 @@
     
     
     
-    <div class="category row nomargin-x">
-      <a class="category-item collapsed
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="最近公共祖先"
         id="heading-dbb6aa58b38f29b37c51d15c41d21b09" role="tab" data-toggle="collapse" href="#collapse-dbb6aa58b38f29b37c51d15c41d21b09"
         aria-expanded="false"
@@ -1277,8 +1265,8 @@
     
     
     
-    <div class="category row nomargin-x">
-      <a class="category-item collapsed
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="强连通分量"
         id="heading-376d9f3f7809d22403825b5870efc66b" role="tab" data-toggle="collapse" href="#collapse-376d9f3f7809d22403825b5870efc66b"
         aria-expanded="false"
@@ -1323,8 +1311,8 @@
     
     
     
-    <div class="category row nomargin-x">
-      <a class="category-item collapsed
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="DFS"
         id="heading-c1bb62b63c65be3760b715faad0bdf8d" role="tab" data-toggle="collapse" href="#collapse-c1bb62b63c65be3760b715faad0bdf8d"
         aria-expanded="false"
@@ -1374,8 +1362,8 @@
     
     
     
-    <div class="category row nomargin-x">
-      <a class="category-item collapsed
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="贪心"
         id="heading-1c74aefdf6c8fa046dd3dfdcd5ec42c3" role="tab" data-toggle="collapse" href="#collapse-1c74aefdf6c8fa046dd3dfdcd5ec42c3"
         aria-expanded="false"
@@ -1425,8 +1413,8 @@
     
     
     
-    <div class="category row nomargin-x">
-      <a class="category-item collapsed
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="数据结构"
         id="heading-0fea7c47d93da5689f31820ee525b367" role="tab" data-toggle="collapse" href="#collapse-0fea7c47d93da5689f31820ee525b367"
         aria-expanded="false"
@@ -1453,14 +1441,12 @@
   </div>
 
           
-          
-  
   
     
     
     
-    <div class="category row nomargin-x">
-      <a class="category-item collapsed
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="并查集"
         id="heading-afaef14ebcffdf11ef0a5d3e61b50866" role="tab" data-toggle="collapse" href="#collapse-afaef14ebcffdf11ef0a5d3e61b50866"
         aria-expanded="false"
@@ -1505,8 +1491,8 @@
     
     
     
-    <div class="category row nomargin-x">
-      <a class="category-item collapsed
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="栈"
         id="heading-58463bda2fb934a0abc9e9a02c012a41" role="tab" data-toggle="collapse" href="#collapse-58463bda2fb934a0abc9e9a02c012a41"
         aria-expanded="false"
@@ -1547,8 +1533,8 @@
     
     
     
-    <div class="category row nomargin-x">
-      <a class="category-item collapsed
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="暴力"
         id="heading-85071cfb0fafbd7121793cab8d1001bb" role="tab" data-toggle="collapse" href="#collapse-85071cfb0fafbd7121793cab8d1001bb"
         aria-expanded="false"
@@ -1732,14 +1718,12 @@
   </div>
 
           
-          
-  
   
     
     
     
-    <div class="category row nomargin-x">
-      <a class="category-item collapsed
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="树"
         id="heading-302f276a934f5b3debc891512c311e91" role="tab" data-toggle="collapse" href="#collapse-302f276a934f5b3debc891512c311e91"
         aria-expanded="false"
@@ -1812,14 +1796,12 @@
   </div>
 
           
-          
-  
   
     
     
     
-    <div class="category row nomargin-x">
-      <a class="category-item collapsed
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="有向强连通性"
         id="heading-fb0b3933dad846cf3c1285b3fcbbc4a0" role="tab" data-toggle="collapse" href="#collapse-fb0b3933dad846cf3c1285b3fcbbc4a0"
         aria-expanded="false"
@@ -1912,31 +1894,6 @@
     </div>
   
   
-    <div class="statistics">
-  
-  
-
-  
-    
-      <span id="leancloud-site-pv-container" style="display: none">
-        总访问量 
-        <span id="leancloud-site-pv"></span>
-         次
-      </span>
-    
-    
-      <span id="leancloud-site-uv-container" style="display: none">
-        总访客数 
-        <span id="leancloud-site-uv"></span>
-         人
-      </span>
-    
-    
-
-  
-</div>
-
-  
   
   
 </div>
@@ -1945,8 +1902,8 @@
 
   <!-- Scripts -->
   
-  <script  src="https://cdn.staticfile.org/nprogress/0.2.0/nprogress.min.js" ></script>
-  <link  rel="stylesheet" href="https://cdn.staticfile.org/nprogress/0.2.0/nprogress.min.css" />
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
 
   <script>
     NProgress.configure({"showSpinner":false,"trickleSpeed":100})
@@ -1957,10 +1914,30 @@
   </script>
 
 
-<script  src="https://cdn.staticfile.org/jquery/3.6.0/jquery.min.js" ></script>
-<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
 <script  src="/js/events.js" ></script>
 <script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
 
 
   
@@ -1969,45 +1946,8 @@
 
 
 
-  <script  src="https://cdn.staticfile.org/typed.js/2.0.12/typed.min.js" ></script>
-  <script>
-    (function (window, document) {
-      var typing = Fluid.plugins.typing;
-      var subtitle = document.getElementById('subtitle');
-      if (!subtitle || !typing) {
-        return;
-      }
-      var title = subtitle.title;
-      
-        typing(title);
-      
-    })(window, document);
-  </script>
-
-
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-
-
 
   <script  src="/js/local-search.js" ></script>
-
-  <script defer src="/js/leancloud.js" ></script>
 
 
 

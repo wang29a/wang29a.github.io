@@ -25,9 +25,10 @@
 <meta name="twitter:card" content="summary_large_image">
   
   
+  
   <title>Hexo</title>
 
-  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
 
 
@@ -56,7 +57,13 @@
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"involutionw.github.io","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"0V6IIKHecn6Fm7YD7S4r61lNTDFVUVM2D7gVq1cU07m838qvHYvMPhf4wKN3P1K4-cn-n1","app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"involutionw.github.io","root":"/","version":"1.9.0","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
@@ -175,9 +182,9 @@
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
-          <span id="subtitle" title="An elegant Material-Design theme for Hexo">
-            
-          </span>
+          
+            <span id="subtitle" data-typed-text="An elegant Material-Design theme for Hexo"></span>
+          
         </div>
 
         
@@ -225,12 +232,12 @@
         </a>
       </h1>
 
-      <p class="index-excerpt">
-        <a href="/2022/04/10/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E7%9A%84%E6%89%A9%E5%B1%95%E5%BA%94%E7%94%A8/" target="_self">
+      <a class="index-excerpt" href="/2022/04/10/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E7%9A%84%E6%89%A9%E5%B1%95%E5%BA%94%E7%94%A8/" target="_self">
+        <div>
           
           例一(新的开始)(虚拟源点)题目 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859#include &lt;iostream&gt;#include &lt;cstring&gt;#include &lt;algorithm&amp;gt
-        </a>
-      </p>
+        </div>
+      </a>
 
       <div class="index-btm post-metas">
         
@@ -273,12 +280,12 @@
         </a>
       </h1>
 
-      <p class="index-excerpt">
-        <a href="/2022/04/10/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/" target="_self">
+      <a class="index-excerpt" href="/2022/04/10/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/" target="_self">
+        <div>
           
           例一题目prim 1234567891011121314151617181920212223242526272829303132333435363738394041424344#include &lt;iostream&gt;#include &lt;cstring&gt;#include &lt;algorithm&gt;using namespace std;const int N &#x3D; 110
-        </a>
-      </p>
+        </div>
+      </a>
 
       <div class="index-btm post-metas">
         
@@ -319,12 +326,12 @@
         </a>
       </h1>
 
-      <p class="index-excerpt">
-        <a href="/2022/04/09/%E6%9D%8E%E7%99%BD%E6%89%93%E9%85%92/" target="_self">
+      <a class="index-excerpt" href="/2022/04/09/%E6%9D%8E%E7%99%BD%E6%89%93%E9%85%92/" target="_self">
+        <div>
           
           题目  状态表示f[i, j, sum] i步，经过j个店，剩余的酒是sum； 在比赛的时候只考虑到前两维状态，想着酒的量不好计算，就没细思考，就使dfs暴力搜索出来 酒的数量不会超过n+m。啊啊啊啊啊啊啊怎么没想到啊啊啊啊啊啊啊啊 状态计算f[i, j, sum] +&#x3D; f[i-1, j, sum-1] f[i, j, sum] +&#x3D; f[i-1, j-1, sum&#x2F;2] sum需要是2的倍数
-        </a>
-      </p>
+        </div>
+      </a>
 
       <div class="index-btm post-metas">
         
@@ -365,12 +372,12 @@
         </a>
       </h1>
 
-      <p class="index-excerpt">
-        <a href="/2022/04/07/Space-Elevator-%E5%A4%AA%E7%A9%BA%E7%94%B5%E6%A2%AF/" target="_self">
+      <a class="index-excerpt" href="/2022/04/07/Space-Elevator-%E5%A4%AA%E7%A9%BA%E7%94%B5%E6%A2%AF/" target="_self">
+        <div>
           
           题目 状态表示f[i][j] 只考虑前i个且高度不超过j的所有集合 属性：bool 是否可以到达该高度 状态转移f[i][j] |&#x3D; f[i-1][j-k*h[i]] 要满足j&gt;&#x3D;k*h[i] 想法一开始看到这个题，像是多重背包，所以就先写了一个模板看看行不行结果就是 出现不可能更新的情况f[i][j] &#x3D; max(f[i-1][j - k*h[i]] + k*h[i]) 这个状态表示不可取
-        </a>
-      </p>
+        </div>
+      </a>
 
       <div class="index-btm post-metas">
         
@@ -404,12 +411,12 @@
         </a>
       </h1>
 
-      <p class="index-excerpt">
-        <a href="/2022/04/05/%E6%9C%80%E7%9F%ADHamilton%E8%B7%AF%E5%BE%84/" target="_self">
+      <a class="index-excerpt" href="/2022/04/05/%E6%9C%80%E7%9F%ADHamilton%E8%B7%AF%E5%BE%84/" target="_self">
+        <div>
           
           题目  初始化f[1, 0] 表示走过0且到第0号点的集合 只有这个状态合法（或者 f[0, 0] 没有走过任何一个点 且到0号点的集合） DP的过程先循环状态，为什么呢？ 因为通过状态转移方程可以看出更新一个点，都是利用之前的状态更新 1234567891011121314151617181920212223242526272829303132#include &lt;iostream&gt;#
-        </a>
-      </p>
+        </div>
+      </a>
 
       <div class="index-btm post-metas">
         
@@ -485,12 +492,12 @@
         </a>
       </h1>
 
-      <p class="index-excerpt">
-        <a href="/2022/04/03/Codeforces-Round-780-Div-3/" target="_self">
+      <a class="index-excerpt" href="/2022/04/03/Codeforces-Round-780-Div-3/" target="_self">
+        <div>
           
           A. Vasya and Coins思维题稍加思考就可以得出 每次先用1 用完在再把1替换成2循环往复直达2用完 1234567891011121314151617181920212223242526#include&lt;iostream&gt;#include&lt;cstdio&gt;#include&lt;cstring&gt;#include&lt;algorithm&gt;using
-        </a>
-      </p>
+        </div>
+      </a>
 
       <div class="index-btm post-metas">
         
@@ -552,12 +559,12 @@
         </a>
       </h1>
 
-      <p class="index-excerpt">
-        <a href="/2022/04/02/Problematic-Picasso/" target="_self">
+      <a class="index-excerpt" href="/2022/04/02/Problematic-Picasso/" target="_self">
+        <div>
           
           题目问题 B: Problematic Picasso时间限制: 1.000 Sec  内存限制: 128 MB 题目描述Picasso’s daughter and protégé, Katie, has just finished painting several masterpieces and she is ready to sell them to the highest bidder.
-        </a>
-      </p>
+        </div>
+      </a>
 
       <div class="index-btm post-metas">
         
@@ -600,12 +607,12 @@
         </a>
       </h1>
 
-      <p class="index-excerpt">
-        <a href="/2022/03/29/%E5%A4%9A%E6%BA%90%E6%B1%87%E6%9C%80%E7%9F%AD%E8%B7%AF/" target="_self">
+      <a class="index-excerpt" href="/2022/03/29/%E5%A4%9A%E6%BA%90%E6%B1%87%E6%9C%80%E7%9F%AD%E8%B7%AF/" target="_self">
+        <div>
           
           Floyd最短路传递闭包找最小环恰好经过K条边的最短路径 原理(DP)状态表示d[k, i, j] 集合： 所有从i出发最终走到j且中间只经过节点编号不超过k的路径(考虑的是中间不包含i j的节点)属性： 最小值 状态计算所有不包含节点k的路径d[k-1, i, j]所有包含节点k的路径d[k-1, i, k] + d[k-1, k, j] 例一 1234567891011121314151617
-        </a>
-      </p>
+        </div>
+      </a>
 
       <div class="index-btm post-metas">
         
@@ -646,12 +653,12 @@
         </a>
       </h1>
 
-      <p class="index-excerpt">
-        <a href="/2022/03/27/Codeforces-Round-764-Div-3/" target="_self">
+      <a class="index-excerpt" href="/2022/03/27/Codeforces-Round-764-Div-3/" target="_self">
+        <div>
           
           题目A. Plus One on the Subset语法题不多说 123456789101112131415161718192021#include &lt;iostream&gt;#include &lt;cstring&gt;#include &lt;algorithm&gt;using namespace std;const int N &#x3D; 10010;int n, m;int a[N];
-        </a>
-      </p>
+        </div>
+      </a>
 
       <div class="index-btm post-metas">
         
@@ -713,12 +720,12 @@
         </a>
       </h1>
 
-      <p class="index-excerpt">
-        <a href="/2022/03/26/%E5%B9%B6%E6%9F%A5%E9%9B%86/" target="_self">
+      <a class="index-excerpt" href="/2022/03/26/%E5%B9%B6%E6%9F%A5%E9%9B%86/" target="_self">
+        <div>
           
           操作 1.合并两个集合  2.查询某个元素的祖宗节点 优化   路径压缩按秩合并（用的不多） 扩展1.记录集合大小 属性绑定到集合本身 绑定到根节点2.记录每个点到根节点的距离  绑定到每个元素上 例题例一题目 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748#includ
-        </a>
-      </p>
+        </div>
+      </a>
 
       <div class="index-btm post-metas">
         
@@ -837,31 +844,6 @@
     </div>
   
   
-    <div class="statistics">
-  
-  
-
-  
-    
-      <span id="leancloud-site-pv-container" style="display: none">
-        总访问量 
-        <span id="leancloud-site-pv"></span>
-         次
-      </span>
-    
-    
-      <span id="leancloud-site-uv-container" style="display: none">
-        总访客数 
-        <span id="leancloud-site-uv"></span>
-         人
-      </span>
-    
-    
-
-  
-</div>
-
-  
   
   
 </div>
@@ -870,8 +852,8 @@
 
   <!-- Scripts -->
   
-  <script  src="https://cdn.staticfile.org/nprogress/0.2.0/nprogress.min.js" ></script>
-  <link  rel="stylesheet" href="https://cdn.staticfile.org/nprogress/0.2.0/nprogress.min.css" />
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
 
   <script>
     NProgress.configure({"showSpinner":false,"trickleSpeed":100})
@@ -882,10 +864,30 @@
   </script>
 
 
-<script  src="https://cdn.staticfile.org/jquery/3.6.0/jquery.min.js" ></script>
-<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
 <script  src="/js/events.js" ></script>
 <script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
 
 
   
@@ -894,45 +896,8 @@
 
 
 
-  <script  src="https://cdn.staticfile.org/typed.js/2.0.12/typed.min.js" ></script>
-  <script>
-    (function (window, document) {
-      var typing = Fluid.plugins.typing;
-      var subtitle = document.getElementById('subtitle');
-      if (!subtitle || !typing) {
-        return;
-      }
-      var title = subtitle.title;
-      
-        typing(title);
-      
-    })(window, document);
-  </script>
-
-
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-
-
 
   <script  src="/js/local-search.js" ></script>
-
-  <script defer src="/js/leancloud.js" ></script>
 
 
 
