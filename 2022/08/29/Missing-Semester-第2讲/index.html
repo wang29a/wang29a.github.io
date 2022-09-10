@@ -16,21 +16,25 @@
   <meta name="author" content="InvolutionZ">
   <meta name="keywords" content="">
   
-    <meta name="description" content="f[i][0&#x2F;1][0&#x2F;1] 考虑前i个数，当前这个状态是否选x，当前这个状态是否选y，选取的方案数 只考虑大于等于x，小于等于y，0&#x2F;1表示是否选x y &#96;&#96;&#96;c++#include #include #include  using namespace std;typedef long long LL;const int N &#x3D; 200010;LL f">
+    <meta name="description" content="空格是用于分隔参数的保留字符 字符串 &quot;&quot;中的变量会被替换，&#39;&#39;中的变量不会被替换 12345foo&#x3D;barecho &quot;$foo&quot;# 打印barecho &amp;#x27;$foo&amp;#x27;# 打印$foo  使用函数 会创建一个文件夹并使用cd进入该文件夹。$1 是脚本第一个参数 完整列表 12345mcd () &amp;#123;    mkdir">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="https://involutionw.github.io/2022/07/14/%E8%BD%ACPDF/index.html">
+<meta property="og:title" content="Missing-Semester 第2讲">
+<meta property="og:url" content="https://involutionw.github.io/2022/08/29/Missing-Semester-%E7%AC%AC2%E8%AE%B2/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="f[i][0&#x2F;1][0&#x2F;1] 考虑前i个数，当前这个状态是否选x，当前这个状态是否选y，选取的方案数 只考虑大于等于x，小于等于y，0&#x2F;1表示是否选x y &#96;&#96;&#96;c++#include #include #include  using namespace std;typedef long long LL;const int N &#x3D; 200010;LL f">
+<meta property="og:description" content="空格是用于分隔参数的保留字符 字符串 &quot;&quot;中的变量会被替换，&#39;&#39;中的变量不会被替换 12345foo&#x3D;barecho &quot;$foo&quot;# 打印barecho &amp;#x27;$foo&amp;#x27;# 打印$foo  使用函数 会创建一个文件夹并使用cd进入该文件夹。$1 是脚本第一个参数 完整列表 12345mcd () &amp;#123;    mkdir">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-07-14T13:40:54.090Z">
-<meta property="article:modified_time" content="2022-07-14T13:47:05.147Z">
+<meta property="og:image" content="https://involutionw.github.io/img/post_cover/icpc.jpeg">
+<meta property="article:published_time" content="2022-08-28T23:43:44.000Z">
+<meta property="article:modified_time" content="2022-08-29T14:24:28.138Z">
 <meta property="article:author" content="InvolutionZ">
+<meta property="article:tag" content="笔记">
+<meta property="article:tag" content="The Missing Semester">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://involutionw.github.io/img/post_cover/icpc.jpeg">
   
   
   
-  <title>Hexo</title>
+  <title>Missing-Semester 第2讲 - Hexo</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -187,13 +191,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+     style="background: url('/img/post_banner/95490521_p0.png') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text=""></span>
+            <span id="subtitle" data-typed-text="Missing-Semester 第2讲"></span>
           
         </div>
 
@@ -204,8 +208,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-07-14 21:40" pubdate>
-          2022年7月14日 晚上
+        <time datetime="2022-08-29 07:43" pubdate>
+          2022年8月29日 早上
         </time>
       </span>
     
@@ -216,7 +220,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          598 字
+          260 字
         
       </span>
     
@@ -227,7 +231,7 @@
         
         
         
-          5 分钟
+          3 分钟
         
       </span>
     
@@ -275,31 +279,19 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none"></h1>
+            <h1 style="display: none">Missing-Semester 第2讲</h1>
             
             <div class="markdown-body">
               
-              <p><code>f[i][0/1][0/1]</code></p>
-<p>考虑前i个数，当前这个状态是否选<code>x</code>，当前这个状态是否选<code>y</code>，选取的方案数</p>
-<p>只考虑大于等于<code>x</code>，小于等于<code>y</code>，0&#x2F;1表示是否选<code>x y</code></p>
-<p>&#96;&#96;&#96;c++<br>#include <iostream><br>#include <cstring><br>#include <algorithm></p>
-<p>using namespace std;<br>typedef long long LL;<br>const int N &#x3D; 200010;<br>LL f[N][2][2];<br>int n, x ,y;<br>int a[N];</p>
-<p>int main()<br>{<br>    scanf(“%d%d%d”, &amp;n, &amp;x, &amp;y);<br>    for(int i &#x3D; 1; i &lt;&#x3D; n; i ++) scanf(“%d”, &amp;a[i]);</p>
-<pre><code class="hljs">LL ans = 0;
-for(int i = 1; i &lt;= n; i ++)
-&#123;
-    if(a[i] &lt; y || a[i] &gt; x) continue;          //小于x 大于y不考虑
-    int xx = (a[i] == x), yy = (a[i] == y);
-    f[i][xx][yy] ++;                            //选择第i个数
-    for(int o = 0; o &lt;= 1; o ++)
-        for(int j = 0; j &lt;= 1; j ++)
-            f[i][xx|o][yy|j] += f[i-1][o][j];
-    ans += f[i][1][1];                          //答案为f[i][1][1]的和，
-&#125;
-cout&lt;&lt;ans&lt;&lt;endl;
-return 0;
-</code></pre>
-<p>}</p>
+              <p>空格是用于分隔参数的保留字符</p>
+<p>字符串 <code>&quot;&quot;</code>中的变量会被替换，<code>&#39;&#39;</code>中的变量不会被替换</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">foo=bar<br><span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;<span class="hljs-variable">$foo</span>&quot;</span><br><span class="hljs-comment"># 打印bar</span><br><span class="hljs-built_in">echo</span> <span class="hljs-string">&#x27;$foo&#x27;</span><br><span class="hljs-comment"># 打印$foo</span><br></code></pre></td></tr></table></figure>
+
+<p>使用函数</p>
+<p>会创建一个文件夹并使用<code>cd</code>进入该文件夹。<br><code>$1</code> 是脚本第一个参数 <a target="_blank" rel="noopener" href="https://tldp.org/LDP/abs/html/special-chars.html">完整列表</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-function"><span class="hljs-title">mcd</span></span> () <br>&#123;<br>    <span class="hljs-built_in">mkdir</span> -p <span class="hljs-string">&quot;<span class="hljs-variable">$1</span>&quot;</span><br>    <span class="hljs-built_in">cd</span> <span class="hljs-string">&quot;<span class="hljs-variable">$1</span>&quot;</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>通配符 - 当你想要利用通配符进行匹配时，你可以分别使用 ? 和 * 来匹配一个或任意个字符。</p>
 
               
             </div>
@@ -307,6 +299,15 @@ return 0;
             <div>
               <div class="post-metas my-3">
   
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E7%AC%94%E8%AE%B0/">#笔记</a>
+      
+        <a href="/tags/The-Missing-Semester/">#The Missing Semester</a>
+      
+    </div>
   
 </div>
 
@@ -316,8 +317,8 @@ return 0;
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div></div>
-      <div>https://involutionw.github.io/2022/07/14/转PDF/</div>
+      <div>Missing-Semester 第2讲</div>
+      <div>https://involutionw.github.io/2022/08/29/Missing-Semester-第2讲/</div>
     </div>
     <div class="license-meta">
       
@@ -329,13 +330,13 @@ return 0;
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年7月14日</div>
+          <div>2022年8月29日</div>
         </div>
       
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2022年7月14日</div>
+          <div>2022年8月29日</div>
         </div>
       
       <div class="license-meta-item">
@@ -364,18 +365,12 @@ return 0;
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/07/15/%E8%AE%AD%E7%BB%83%E8%B5%9B7-15%E8%A1%A5%E9%A2%98/" title="训练赛7.15补题">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">训练赛7.15补题</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/07/14/%E8%AE%AD%E7%BB%83%E8%B5%9B7-14%E8%A1%A5%E9%A2%98/" title="训练赛7.14补题">
-                        <span class="hidden-mobile">训练赛7.14补题</span>
+                      <a href="/2022/08/22/Escape-Room/" title="Escape Room">
+                        <span class="hidden-mobile">Escape Room</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
