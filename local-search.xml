@@ -4,6 +4,59 @@
   
   
   <entry>
+    <title>Python算法</title>
+    <link href="/2022/10/18/Python%E7%AE%97%E6%B3%95/"/>
+    <url>/2022/10/18/Python%E7%AE%97%E6%B3%95/</url>
+    
+    <content type="html"><![CDATA[<h2 id="输入读取"><a href="#输入读取" class="headerlink" title="输入读取"></a>输入读取</h2><p>使用以下进行一行多数据读入</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-built_in">list</span>(<span class="hljs-built_in">map</span>(<span class="hljs-built_in">int</span>, <span class="hljs-built_in">input</span>().split()))<br></code></pre></td></tr></table></figure><h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><p>二维数组</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">a  = [[<span class="hljs-number">0</span> <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(N)] <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(N)]<br>a = [[<span class="hljs-number">0</span>]*N <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(N)]    <span class="hljs-comment">#速度快一些些</span><br></code></pre></td></tr></table></figure><h2 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>, n+<span class="hljs-number">1</span>):      <span class="hljs-comment">#循环从1到n</span><br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">0</span>, n+<span class="hljs-number">1</span>):      <span class="hljs-comment">#循环从0到n</span><br></code></pre></td></tr></table></figure><h2 id="判断"><a href="#判断" class="headerlink" title="判断"></a>判断</h2><h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><p>主函数表示方法</p><p>if <strong>name</strong> &#x3D;&#x3D; “<strong>main</strong>“:</p><h2 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h2><h2 id="具体算法代码"><a href="#具体算法代码" class="headerlink" title="具体算法代码"></a>具体算法代码</h2><h3 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h3><h4 id="DFS"><a href="#DFS" class="headerlink" title="DFS"></a>DFS</h4><h5 id="排列数字"><a href="#排列数字" class="headerlink" title="排列数字"></a>排列数字</h5><p><a href="https://www.acwing.com/problem/content/844/">排列数字</a></p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs python">a = [<span class="hljs-number">0</span>]*<span class="hljs-number">10</span><br>st = [<span class="hljs-number">0</span>]*<span class="hljs-number">10</span><br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">dfs</span>(<span class="hljs-params">cnt, n</span>):<br>    <span class="hljs-keyword">if</span> cnt == n:<br>        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(n):<br>            <span class="hljs-built_in">print</span>(a[i], end = <span class="hljs-string">&quot; &quot;</span>)<br>        <span class="hljs-built_in">print</span>()<br>    <br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>, n+<span class="hljs-number">1</span>):<br>        <span class="hljs-keyword">if</span> st[i] == <span class="hljs-number">0</span>:<br>            st[i] = <span class="hljs-number">1</span><br>            a[cnt] = i<br>            dfs(cnt+<span class="hljs-number">1</span>, n)<br>            st[i] = <span class="hljs-number">0</span><br><br><br><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&quot;__main__&quot;</span>:<br>    n = <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>())<br>    <br>    dfs(<span class="hljs-number">0</span>, n)<br></code></pre></td></tr></table></figure><h4 id="BFS"><a href="#BFS" class="headerlink" title="BFS"></a>BFS</h4><h5 id="走迷宫"><a href="#走迷宫" class="headerlink" title="走迷宫"></a>走迷宫</h5><p><a href="https://www.acwing.com/problem/content/846/">走迷宫</a></p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><br></code></pre></td></tr></table></figure><h3 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h3><h4 id="01背包"><a href="#01背包" class="headerlink" title="01背包"></a>01背包</h4><p><a href="https://www.acwing.com/problem/content/2/">01背包</a></p><p>二维</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs python">N = <span class="hljs-number">1010</span><br><br>n, m = <span class="hljs-built_in">list</span>(<span class="hljs-built_in">map</span>(<span class="hljs-built_in">int</span>, <span class="hljs-built_in">input</span>().split()))<br><br>v = [<span class="hljs-number">0</span>]*N<br>w = [<span class="hljs-number">0</span>]*N<br>f = [[<span class="hljs-number">0</span> <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(N)] <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(N)]<br><br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>, n+<span class="hljs-number">1</span>):<br>    v[i], w[i] = <span class="hljs-built_in">list</span>(<span class="hljs-built_in">map</span>(<span class="hljs-built_in">int</span>, <span class="hljs-built_in">input</span>().split()))<br><br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>, n+<span class="hljs-number">1</span>):<br>    <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">0</span>, m+<span class="hljs-number">1</span>):<br>        f[i][j] = f[i-<span class="hljs-number">1</span>][j]<br>        <span class="hljs-keyword">if</span> j&gt;=v[i]:<br>            f[i][j] = <span class="hljs-built_in">max</span>(f[i][j], f[i-<span class="hljs-number">1</span>][j-v[i]]+w[i])<br><br><span class="hljs-built_in">print</span>(f[n][m])<br>    <br></code></pre></td></tr></table></figure><p>一维优化</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs python">N = <span class="hljs-number">1010</span><br><br>n, m = <span class="hljs-built_in">list</span>(<span class="hljs-built_in">map</span>(<span class="hljs-built_in">int</span>, <span class="hljs-built_in">input</span>().split()))<br><br>v = [<span class="hljs-number">0</span>]*N<br>w = [<span class="hljs-number">0</span>]*N<br>f = [<span class="hljs-number">0</span>]*N<br><br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>, n+<span class="hljs-number">1</span>):<br>    v[i], w[i] = <span class="hljs-built_in">list</span>(<span class="hljs-built_in">map</span>(<span class="hljs-built_in">int</span>, <span class="hljs-built_in">input</span>().split()))<br><br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(n+<span class="hljs-number">1</span>):<br>    <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(m, v[i]-<span class="hljs-number">1</span>, -<span class="hljs-number">1</span>):<br>            f[j] = <span class="hljs-built_in">max</span>(f[j], f[j-v[i]]+w[i])<br><br><span class="hljs-built_in">print</span>(f[m])<br>    <br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>Python</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>PA心得</title>
+    <link href="/2022/10/16/PA%E5%BF%83%E5%BE%97/"/>
+    <url>/2022/10/16/PA%E5%BF%83%E5%BE%97/</url>
+    
+    <content type="html"><![CDATA[<h2 id="PA1"><a href="#PA1" class="headerlink" title="PA1"></a>PA1</h2><p>使用程序实现了nemu很强</p><p>程序是个状态机，看到这个以及回顾这两个星期学到的内容，突然感觉我的兴趣方向会不会是计算机底层捏</p><h3 id="谁来指示程序的结束"><a href="#谁来指示程序的结束" class="headerlink" title="谁来指示程序的结束"></a>谁来指示程序的结束</h3>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>vim</title>
+    <link href="/2022/10/09/vim-0/"/>
+    <url>/2022/10/09/vim-0/</url>
+    
+    <content type="html"><![CDATA[<p>可快速进行教程</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">vimtutor<br></code></pre></td></tr></table></figure><p>The cursor is moved using either the arrow keys or the hjkl keys.</p><p>h (left)j(down)k(up)l(right)</p><p>删除单个字符<code>x</code></p><p>插入输入<code>i</code></p><p>追加内容使用<code>a</code></p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>vim</tag>
+      
+      <tag>linux</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>数字游戏</title>
     <link href="/2022/10/09/%E6%95%B0%E5%AD%97%E6%B8%B8%E6%88%8F/"/>
     <url>/2022/10/09/%E6%95%B0%E5%AD%97%E6%B8%B8%E6%88%8F/</url>
@@ -630,31 +683,6 @@
   
   
   <entry>
-    <title>训练赛7.12补题</title>
-    <link href="/2022/07/13/%E8%AE%AD%E7%BB%83%E8%B5%9B7-12%E8%A1%A5%E9%A2%98/"/>
-    <url>/2022/07/13/%E8%AE%AD%E7%BB%83%E8%B5%9B7-12%E8%A1%A5%E9%A2%98/</url>
-    
-    <content type="html"><![CDATA[<h2 id="Just-K-状态压缩DP"><a href="#Just-K-状态压缩DP" class="headerlink" title="Just K[状态压缩DP]"></a>Just K[状态压缩DP]</h2><h2 id="Ski-Course-Rating"><a href="#Ski-Course-Rating" class="headerlink" title="Ski Course Rating()"></a><a href="">Ski Course Rating()</a></h2>]]></content>
-    
-    
-    
-    <tags>
-      
-      <tag>并查集</tag>
-      
-      <tag>状态压缩DP</tag>
-      
-      <tag>补题</tag>
-      
-      <tag>训练赛</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>训练赛7.13补题</title>
     <link href="/2022/07/13/%E8%AE%AD%E7%BB%83%E8%B5%9B7-13%E8%A1%A5%E9%A2%98/"/>
     <url>/2022/07/13/%E8%AE%AD%E7%BB%83%E8%B5%9B7-13%E8%A1%A5%E9%A2%98/</url>
@@ -670,6 +698,31 @@
       <tag>状态压缩DP</tag>
       
       <tag>二分</tag>
+      
+      <tag>补题</tag>
+      
+      <tag>训练赛</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>训练赛7.12补题</title>
+    <link href="/2022/07/13/%E8%AE%AD%E7%BB%83%E8%B5%9B7-12%E8%A1%A5%E9%A2%98/"/>
+    <url>/2022/07/13/%E8%AE%AD%E7%BB%83%E8%B5%9B7-12%E8%A1%A5%E9%A2%98/</url>
+    
+    <content type="html"><![CDATA[<h2 id="Just-K-状态压缩DP"><a href="#Just-K-状态压缩DP" class="headerlink" title="Just K[状态压缩DP]"></a>Just K[状态压缩DP]</h2><h2 id="Ski-Course-Rating"><a href="#Ski-Course-Rating" class="headerlink" title="Ski Course Rating()"></a><a href="">Ski Course Rating()</a></h2>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>并查集</tag>
+      
+      <tag>状态压缩DP</tag>
       
       <tag>补题</tag>
       
