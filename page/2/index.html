@@ -219,6 +219,146 @@
     
     
       <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2022/10/09/%E6%95%B0%E5%AD%97%E6%B8%B8%E6%88%8F/" target="_self">
+          <img src="/img/post_cover/icpc.jpeg" srcset="/img/loading.gif" lazyload alt="数字游戏">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2022/10/09/%E6%95%B0%E5%AD%97%E6%B8%B8%E6%88%8F/" target="_self">
+          数字游戏
+        </a>
+      </h1>
+
+      <a class="index-excerpt" href="/2022/10/09/%E6%95%B0%E5%AD%97%E6%B8%B8%E6%88%8F/" target="_self">
+        <div>
+          
+          题目 一看这题就感觉应该是一道DP+前缀和，还需要将环变成链，扩大一倍即可，环形区间DP的惯用套路。 先简单写了一下状态转移方程：f[i][j]表示前$i$个数中，分成了$j$组，这时我没有注意到问题，这个状态转移是不对的，它少了一维，我无法得知f[n][m]中到底是用了几个数，可能并没有使用$n$个数不能满足题意。 所以这时候我应该加一维，f[i][j][k]表示前$i$个数中，分成了$j$组，
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2022-10-09 10:42" pubdate>
+              2022-10-09
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">#动态规划</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2022/10/08/%E8%BF%87%E6%B2%B3/" target="_self">
+          <img src="/img/post_cover/icpc.jpeg" srcset="/img/loading.gif" lazyload alt="过河">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2022/10/08/%E8%BF%87%E6%B2%B3/" target="_self">
+          过河
+        </a>
+      </h1>
+
+      <a class="index-excerpt" href="/2022/10/08/%E8%BF%87%E6%B2%B3/" target="_self">
+        <div>
+          
+          题目 这题的难点在于$L$很大，现在要将$L$的问题解决 情况一：当$S&#x3D;&#x3D;T$时，线性处理一边，判断是否可以到达。 情况二：当$S≠T$时，至少有两种选择$T-1、T$，由结论可知，最大不能由$T-1、T$凑出的距离为$(T-1)(T-2)-1$，这个距离最大为$71$，说明当两石头距离超过72，中间的距离可以忽略不计。这时可以将两个石头的距离缩小至100。$L$变为$100
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2022-10-08 09:44" pubdate>
+              2022-10-08
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/DP/">#DP</a>
+            
+              <a href="/tags/%E6%95%B0%E5%AD%A6/">#数学</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2022/09/22/%E4%B9%A6%E6%9C%AC%E6%95%B4%E7%90%86/" target="_self">
+          <img src="/img/post_cover/icpc.jpeg" srcset="/img/loading.gif" lazyload alt="书本整理">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2022/09/22/%E4%B9%A6%E6%9C%AC%E6%95%B4%E7%90%86/" target="_self">
+          书本整理
+        </a>
+      </h1>
+
+      <a class="index-excerpt" href="/2022/09/22/%E4%B9%A6%E6%9C%AC%E6%95%B4%E7%90%86/" target="_self">
+        <div>
+          
+          一道很经典的DP 闫氏DP分析法如下：  1234567891011121314151617181920212223242526272829303132333435363738394041424344454647#include &lt;iostream&gt;#include &lt;cstring&gt;#include &lt;algorithm&gt;#define x first#def
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2022-09-22 14:30" pubdate>
+              2022-09-22
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/DP/">#DP</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
         <a href="/2022/09/15/CS61B-proj1a/" target="_self">
           <img src="/img/post_cover/icpc.jpeg" srcset="/img/loading.gif" lazyload alt="CS61B proj1a">
         </a>
@@ -554,23 +694,23 @@
     
     
       <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/2022/08/05/%E8%AE%AD%E7%BB%83%E8%B5%9B8-5%E8%A1%A5%E9%A2%98/" target="_self">
-          <img src="/img/post_cover/icpc.jpeg" srcset="/img/loading.gif" lazyload alt="训练赛8.5补题">
+        <a href="/2022/07/30/%E8%AE%AD%E7%BB%83%E8%B5%9B7-28%E8%A1%A5%E9%A2%98/" target="_self">
+          <img src="/img/post_cover/icpc.jpeg" srcset="/img/loading.gif" lazyload alt="训练赛7.28补题">
         </a>
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2022/08/05/%E8%AE%AD%E7%BB%83%E8%B5%9B8-5%E8%A1%A5%E9%A2%98/" target="_self">
-          训练赛8.5补题
+        <a href="/2022/07/30/%E8%AE%AD%E7%BB%83%E8%B5%9B7-28%E8%A1%A5%E9%A2%98/" target="_self">
+          训练赛7.28补题
         </a>
       </h1>
 
-      <a class="index-excerpt" href="/2022/08/05/%E8%AE%AD%E7%BB%83%E8%B5%9B8-5%E8%A1%A5%E9%A2%98/" target="_self">
+      <a class="index-excerpt" href="/2022/07/30/%E8%AE%AD%E7%BB%83%E8%B5%9B7-28%E8%A1%A5%E9%A2%98/" target="_self">
         <div>
           
-          
+          监控(欧拉函数)谜之题意😅 不如看洛谷的这道题目或者Acwing的 疑惑的题目捏 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950#include &lt;iostream&gt;#include &lt;cstring&gt;#include &lt;algor
         </div>
       </a>
 
@@ -578,47 +718,8 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2022-08-05 11:05" pubdate>
-              2022-08-05
-            </time>
-          </div>
-        
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/2022/08/05/%E8%AE%AD%E7%BB%83%E8%B5%9B8-4%E8%A1%A5%E9%A2%98/" target="_self">
-          <img src="/img/post_cover/icpc.jpeg" srcset="/img/loading.gif" lazyload alt="训练赛8.4补题">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2022/08/05/%E8%AE%AD%E7%BB%83%E8%B5%9B8-4%E8%A1%A5%E9%A2%98/" target="_self">
-          训练赛8.4补题
-        </a>
-      </h1>
-
-      <a class="index-excerpt" href="/2022/08/05/%E8%AE%AD%E7%BB%83%E8%B5%9B8-4%E8%A1%A5%E9%A2%98/" target="_self">
-        <div>
-          
-          矩形的对角线经过的小方格数量对于一个长度为$m$，宽度为$n$的矩形，均分成$m∗n$个小方格，则对角线经过的小方格数量为$$m+n−(m,n)$$其中$(m,n)$为$m$和$n$的最大公约数。 推导 1  圆上的整点1
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2022-08-05 07:48" pubdate>
-              2022-08-05
+            <time datetime="2022-07-30 05:37" pubdate>
+              2022-07-30
             </time>
           </div>
         
@@ -627,87 +728,11 @@
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/%E6%95%B0%E5%AD%A6/">#数学</a>
+              <a href="/tags/%E5%9B%BE%E8%AE%BA/">#图论</a>
+            
+              <a href="/tags/%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0/">#欧拉函数</a>
             
           </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/2022/08/04/%E8%AE%AD%E7%BB%83%E8%B5%9B7-31%E8%A1%A5%E9%A2%98/" target="_self">
-          <img src="/img/post_cover/icpc.jpeg" srcset="/img/loading.gif" lazyload alt="训练赛7.31补题">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2022/08/04/%E8%AE%AD%E7%BB%83%E8%B5%9B7-31%E8%A1%A5%E9%A2%98/" target="_self">
-          训练赛7.31补题
-        </a>
-      </h1>
-
-      <a class="index-excerpt" href="/2022/08/04/%E8%AE%AD%E7%BB%83%E8%B5%9B7-31%E8%A1%A5%E9%A2%98/" target="_self">
-        <div>
-          
-          Longest X()Graph Destruction()
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2022-08-04 07:53" pubdate>
-              2022-08-04
-            </time>
-          </div>
-        
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/2022/08/04/%E8%AE%AD%E7%BB%83%E8%B5%9B7-30%E8%A1%A5%E9%A2%98/" target="_self">
-          <img src="/img/post_cover/icpc.jpeg" srcset="/img/loading.gif" lazyload alt="训练赛7.30补题">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2022/08/04/%E8%AE%AD%E7%BB%83%E8%B5%9B7-30%E8%A1%A5%E9%A2%98/" target="_self">
-          训练赛7.30补题
-        </a>
-      </h1>
-
-      <a class="index-excerpt" href="/2022/08/04/%E8%AE%AD%E7%BB%83%E8%B5%9B7-30%E8%A1%A5%E9%A2%98/" target="_self">
-        <div>
-          
-          
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2022-08-04 07:53" pubdate>
-              2022-08-04
-            </time>
-          </div>
-        
-        
         
       </div>
     </article>
@@ -717,7 +742,7 @@
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/#board">3</a><a class="page-number" href="/page/4/#board">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/15/#board">15</a><a class="extend next" rel="next" href="/page/3/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/#board">3</a><a class="page-number" href="/page/4/#board">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/#board">13</a><a class="extend next" rel="next" href="/page/3/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 
