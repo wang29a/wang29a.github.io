@@ -7,8 +7,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/google.png">
-  <link rel="icon" href="/img/google.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
@@ -58,7 +58,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"involutionw.github.io","root":"/","version":"1.9.0","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"involutionw.github.io","root":"/","version":"1.9.5","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -67,6 +67,8 @@
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
+  
+
 
   
 <meta name="generator" content="Hexo 6.0.0"></head>
@@ -102,7 +104,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/">
                 <i class="iconfont icon-home-fill"></i>
-                首页
+                <span>首页</span>
               </a>
             </li>
           
@@ -114,7 +116,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/archives/">
                 <i class="iconfont icon-archive-fill"></i>
-                归档
+                <span>归档</span>
               </a>
             </li>
           
@@ -126,7 +128,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/categories/">
                 <i class="iconfont icon-category-fill"></i>
-                分类
+                <span>分类</span>
               </a>
             </li>
           
@@ -138,7 +140,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/tags/">
                 <i class="iconfont icon-tags-fill"></i>
-                标签
+                <span>标签</span>
               </a>
             </li>
           
@@ -150,7 +152,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/about/">
                 <i class="iconfont icon-user-fill"></i>
-                关于
+                <span>关于</span>
               </a>
             </li>
           
@@ -158,15 +160,16 @@
         
           <li class="nav-item" id="search-btn">
             <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
-              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+              <i class="iconfont icon-search"></i>
             </a>
           </li>
           
         
         
           <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
-                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
           </li>
         
       </ul>
@@ -183,7 +186,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="An elegant Material-Design theme for Hexo"></span>
+            <span id="subtitle" data-typed-text="There is no magic in computer systems"></span>
           
         </div>
 
@@ -219,22 +222,70 @@
     
     
       <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2022/03/21/%E7%A7%8D%E6%A0%91/" target="_self">
+          <img src="/img/post_cover/icpc.jpeg" srcset="/img/loading.gif" lazyload alt="种树!">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2022/03/21/%E7%A7%8D%E6%A0%91/" target="_self">
+          种树!
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt " href="/2022/03/21/%E7%A7%8D%E6%A0%91/" target="_self">
+        <div>
+          
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2022-03-21 19:23" pubdate>
+              2022-03-21
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%A0%91%E5%BD%A2DP/">#树形DP</a>
+            
+              <a href="/tags/%E6%8D%A2%E6%A0%B9DP/">#换根DP</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
         <a href="/2022/03/19/%E9%9F%B3%E9%87%8F%E8%B0%83%E8%8A%82/" target="_self">
           <img src="/img/post_cover/icpc.jpeg" srcset="/img/loading.gif" lazyload alt="音量调节">
         </a>
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/2022/03/19/%E9%9F%B3%E9%87%8F%E8%B0%83%E8%8A%82/" target="_self">
           音量调节
         </a>
-      </h1>
+      </h2>
 
-      <a class="index-excerpt" href="/2022/03/19/%E9%9F%B3%E9%87%8F%E8%B0%83%E8%8A%82/" target="_self">
+      
+      <a class="index-excerpt " href="/2022/03/19/%E9%9F%B3%E9%87%8F%E8%B0%83%E8%8A%82/" target="_self">
         <div>
-          
           题目
         </div>
       </a>
@@ -273,16 +324,16 @@
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/2022/03/19/%E6%96%B9%E6%A0%BC%E5%8F%96%E6%95%B0/" target="_self">
           方格取数
         </a>
-      </h1>
+      </h2>
 
-      <a class="index-excerpt" href="/2022/03/19/%E6%96%B9%E6%A0%BC%E5%8F%96%E6%95%B0/" target="_self">
+      
+      <a class="index-excerpt " href="/2022/03/19/%E6%96%B9%E6%A0%BC%E5%8F%96%E6%95%B0/" target="_self">
         <div>
-          
           两种分析方式
         </div>
       </a>
@@ -321,17 +372,17 @@
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/2022/03/19/Adventurer-s-Guild/" target="_self">
           Adventurer&#39;s Guild
         </a>
-      </h1>
+      </h2>
 
-      <a class="index-excerpt" href="/2022/03/19/Adventurer-s-Guild/" target="_self">
+      
+      <a class="index-excerpt " href="/2022/03/19/Adventurer-s-Guild/" target="_self">
         <div>
           
-          12345678910111213141516171819202122232425262728293031323334353637383940414243#include &lt;iostream&gt;#include &lt;cstring&gt;#include &lt;algorithm&gt;using namespace std;typedef long long LL;const
         </div>
       </a>
 
@@ -369,16 +420,16 @@
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/2022/03/19/%E4%BA%8C%E5%8F%89%E8%8B%B9%E6%9E%9C%E6%A0%91/" target="_self">
           二叉苹果树
         </a>
-      </h1>
+      </h2>
 
-      <a class="index-excerpt" href="/2022/03/19/%E4%BA%8C%E5%8F%89%E8%8B%B9%E6%9E%9C%E6%A0%91/" target="_self">
+      
+      <a class="index-excerpt " href="/2022/03/19/%E4%BA%8C%E5%8F%89%E8%8B%B9%E6%9E%9C%E6%A0%91/" target="_self">
         <div>
-          
           题目
         </div>
       </a>
@@ -417,16 +468,16 @@
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/2022/03/19/%E6%A0%91%E7%9A%84%E4%B8%AD%E5%BF%83/" target="_self">
           树的中心
         </a>
-      </h1>
+      </h2>
 
-      <a class="index-excerpt" href="/2022/03/19/%E6%A0%91%E7%9A%84%E4%B8%AD%E5%BF%83/" target="_self">
+      
+      <a class="index-excerpt " href="/2022/03/19/%E6%A0%91%E7%9A%84%E4%B8%AD%E5%BF%83/" target="_self">
         <div>
-          
           题目
         </div>
       </a>
@@ -465,17 +516,17 @@
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/2022/03/19/%E6%A0%91%E5%BD%A2DP/" target="_self">
           树的直径
         </a>
-      </h1>
+      </h2>
 
-      <a class="index-excerpt" href="/2022/03/19/%E6%A0%91%E5%BD%A2DP/" target="_self">
+      
+      <a class="index-excerpt " href="/2022/03/19/%E6%A0%91%E5%BD%A2DP/" target="_self">
         <div>
           
-          1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253#include &lt;iostream&gt;#include &lt;cstring&gt;#include &lt;algorithm&gt;using namespace std;typedef
         </div>
       </a>
 
@@ -511,17 +562,17 @@
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/2022/03/17/%E5%B0%8FBiu%E7%9A%84%E6%A0%91/" target="_self">
           小Biu的树
         </a>
-      </h1>
+      </h2>
 
-      <a class="index-excerpt" href="/2022/03/17/%E5%B0%8FBiu%E7%9A%84%E6%A0%91/" target="_self">
+      
+      <a class="index-excerpt " href="/2022/03/17/%E5%B0%8FBiu%E7%9A%84%E6%A0%91/" target="_self">
         <div>
           
-          问题 H: 小Biu的树时间限制: 1.000 Sec  内存限制: 128 MB 题目描述小Biu有一颗有根树，树上有n个节点（编号1~n）。其中每个节点有一个苹果，每个苹果有一定的能量，现在小Biu和小Piu分别选出一棵子树，要求两棵子树不能相交而且所有苹果的能量和最大。输入第一行输入一个正整数 n(1 &lt;&#x3D; n &lt;&#x3D; 10^5)，表示树的结点个数。第二行输入n
         </div>
       </a>
 
@@ -550,16 +601,16 @@
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/2022/03/15/HXY%E5%92%8C%E5%BA%8F%E5%88%97/" target="_self">
           HXY和序列
         </a>
-      </h1>
+      </h2>
 
-      <a class="index-excerpt" href="/2022/03/15/HXY%E5%92%8C%E5%BA%8F%E5%88%97/" target="_self">
+      
+      <a class="index-excerpt " href="/2022/03/15/HXY%E5%92%8C%E5%BA%8F%E5%88%97/" target="_self">
         <div>
-          
           题目
         </div>
       </a>
@@ -596,16 +647,16 @@
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/2022/03/15/%E8%86%9C%E6%8B%9C/" target="_self">
           膜拜
         </a>
-      </h1>
+      </h2>
 
-      <a class="index-excerpt" href="/2022/03/15/%E8%86%9C%E6%8B%9C/" target="_self">
+      
+      <a class="index-excerpt " href="/2022/03/15/%E8%86%9C%E6%8B%9C/" target="_self">
         <div>
-          
           题目
         </div>
       </a>
@@ -638,59 +689,11 @@
     </article>
   </div>
 
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/2022/03/15/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/" target="_self">
-          <img src="/img/post_cover/icpc.jpeg" srcset="/img/loading.gif" lazyload alt="树状数组">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2022/03/15/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/" target="_self">
-          树状数组
-        </a>
-      </h1>
-
-      <a class="index-excerpt" href="/2022/03/15/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/" target="_self">
-        <div>
-          
-          一前缀和 单点操作, 区间查询例题 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748#include &lt;iostream&gt;#include &lt;cstring&gt;#include &lt;algorithm&gt;using namespace std;
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2022-03-15 19:51" pubdate>
-              2022-03-15
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">#数据结构</a>
-            
-              <a href="/tags/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/">#树状数组</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
 
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/page/7/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/#board">6</a><a class="page-number" href="/page/7/#board">7</a><span class="page-number current">8</span><a class="page-number" href="/page/9/#board">9</a><a class="page-number" href="/page/10/#board">10</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/#board">13</a><a class="extend next" rel="next" href="/page/9/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/page/7/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/#board">6</a><a class="page-number" href="/page/7/#board">7</a><span class="page-number current">8</span><a class="page-number" href="/page/9/#board">9</a><a class="page-number" href="/page/10/#board">10</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/#board">14</a><a class="extend next" rel="next" href="/page/9/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 
@@ -764,7 +767,7 @@
   </script>
 
 
-<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
 <script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
 <script  src="/js/events.js" ></script>
 <script  src="/js/plugins.js" ></script>
@@ -784,8 +787,6 @@
       
     })(window, document);
   </script>
-
-
 
 
 

@@ -7,8 +7,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/google.png">
-  <link rel="icon" href="/img/google.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
@@ -58,7 +58,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"involutionw.github.io","root":"/","version":"1.9.0","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"involutionw.github.io","root":"/","version":"1.9.5","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -67,6 +67,8 @@
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
+  
+
 
   
 <meta name="generator" content="Hexo 6.0.0"></head>
@@ -102,7 +104,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/">
                 <i class="iconfont icon-home-fill"></i>
-                首页
+                <span>首页</span>
               </a>
             </li>
           
@@ -114,7 +116,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/archives/">
                 <i class="iconfont icon-archive-fill"></i>
-                归档
+                <span>归档</span>
               </a>
             </li>
           
@@ -126,7 +128,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/categories/">
                 <i class="iconfont icon-category-fill"></i>
-                分类
+                <span>分类</span>
               </a>
             </li>
           
@@ -138,7 +140,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/tags/">
                 <i class="iconfont icon-tags-fill"></i>
-                标签
+                <span>标签</span>
               </a>
             </li>
           
@@ -150,7 +152,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/about/">
                 <i class="iconfont icon-user-fill"></i>
-                关于
+                <span>关于</span>
               </a>
             </li>
           
@@ -158,15 +160,16 @@
         
           <li class="nav-item" id="search-btn">
             <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
-              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+              <i class="iconfont icon-search"></i>
             </a>
           </li>
           
         
         
           <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
-                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
           </li>
         
       </ul>
@@ -183,7 +186,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="An elegant Material-Design theme for Hexo"></span>
+            <span id="subtitle" data-typed-text="There is no magic in computer systems"></span>
           
         </div>
 
@@ -219,23 +222,71 @@
     
     
       <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2022/10/09/vim-0/" target="_self">
+          <img src="/img/post_cover/icpc.jpeg" srcset="/img/loading.gif" lazyload alt="vim">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2022/10/09/vim-0/" target="_self">
+          vim
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt " href="/2022/10/09/vim-0/" target="_self">
+        <div>
+          
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2022-10-09 21:07" pubdate>
+              2022-10-09
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/vim/">#vim</a>
+            
+              <a href="/tags/linux/">#linux</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
         <a href="/2022/10/09/%E6%95%B0%E5%AD%97%E6%B8%B8%E6%88%8F/" target="_self">
           <img src="/img/post_cover/icpc.jpeg" srcset="/img/loading.gif" lazyload alt="数字游戏">
         </a>
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/2022/10/09/%E6%95%B0%E5%AD%97%E6%B8%B8%E6%88%8F/" target="_self">
           数字游戏
         </a>
-      </h1>
+      </h2>
 
-      <a class="index-excerpt" href="/2022/10/09/%E6%95%B0%E5%AD%97%E6%B8%B8%E6%88%8F/" target="_self">
+      
+      <a class="index-excerpt " href="/2022/10/09/%E6%95%B0%E5%AD%97%E6%B8%B8%E6%88%8F/" target="_self">
         <div>
           
-          题目 一看这题就感觉应该是一道DP+前缀和，还需要将环变成链，扩大一倍即可，环形区间DP的惯用套路。 先简单写了一下状态转移方程：f[i][j]表示前$i$个数中，分成了$j$组，这时我没有注意到问题，这个状态转移是不对的，它少了一维，我无法得知f[n][m]中到底是用了几个数，可能并没有使用$n$个数不能满足题意。 所以这时候我应该加一维，f[i][j][k]表示前$i$个数中，分成了$j$组，
         </div>
       </a>
 
@@ -271,17 +322,17 @@
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/2022/10/08/%E8%BF%87%E6%B2%B3/" target="_self">
           过河
         </a>
-      </h1>
+      </h2>
 
-      <a class="index-excerpt" href="/2022/10/08/%E8%BF%87%E6%B2%B3/" target="_self">
+      
+      <a class="index-excerpt " href="/2022/10/08/%E8%BF%87%E6%B2%B3/" target="_self">
         <div>
           
-          题目 这题的难点在于$L$很大，现在要将$L$的问题解决 情况一：当$S&#x3D;&#x3D;T$时，线性处理一边，判断是否可以到达。 情况二：当$S≠T$时，至少有两种选择$T-1、T$，由结论可知，最大不能由$T-1、T$凑出的距离为$(T-1)(T-2)-1$，这个距离最大为$71$，说明当两石头距离超过72，中间的距离可以忽略不计。这时可以将两个石头的距离缩小至100。$L$变为$100
         </div>
       </a>
 
@@ -319,17 +370,17 @@
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/2022/09/22/%E4%B9%A6%E6%9C%AC%E6%95%B4%E7%90%86/" target="_self">
           书本整理
         </a>
-      </h1>
+      </h2>
 
-      <a class="index-excerpt" href="/2022/09/22/%E4%B9%A6%E6%9C%AC%E6%95%B4%E7%90%86/" target="_self">
+      
+      <a class="index-excerpt " href="/2022/09/22/%E4%B9%A6%E6%9C%AC%E6%95%B4%E7%90%86/" target="_self">
         <div>
           
-          一道很经典的DP 闫氏DP分析法如下：  1234567891011121314151617181920212223242526272829303132333435363738394041424344454647#include &lt;iostream&gt;#include &lt;cstring&gt;#include &lt;algorithm&gt;#define x first#def
         </div>
       </a>
 
@@ -365,17 +416,17 @@
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/2022/09/15/CS61B-proj1a/" target="_self">
           CS61B proj1a
         </a>
-      </h1>
+      </h2>
 
-      <a class="index-excerpt" href="/2022/09/15/CS61B-proj1a/" target="_self">
+      
+      <a class="index-excerpt " href="/2022/09/15/CS61B-proj1a/" target="_self">
         <div>
           
-          一个很有意思的project
         </div>
       </a>
 
@@ -441,17 +492,17 @@
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/2022/09/11/CS61B-%E8%AE%B0%E5%BD%95/" target="_self">
           CS61B 记录
         </a>
-      </h1>
+      </h2>
 
-      <a class="index-excerpt" href="/2022/09/11/CS61B-%E8%AE%B0%E5%BD%95/" target="_self">
+      
+      <a class="index-excerpt " href="/2022/09/11/CS61B-%E8%AE%B0%E5%BD%95/" target="_self">
         <div>
           
-          课程地址：18sp 作业部分提交作业 123git add &#x2F;*添加文件*&#x2F;git commit -m &quot;提交信息&quot;git push origin master
         </div>
       </a>
 
@@ -517,17 +568,17 @@
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/2022/08/29/Missing-Semester-%E7%AC%AC2%E8%AE%B2/" target="_self">
           Missing-Semester 第2讲
         </a>
-      </h1>
+      </h2>
 
-      <a class="index-excerpt" href="/2022/08/29/Missing-Semester-%E7%AC%AC2%E8%AE%B2/" target="_self">
+      
+      <a class="index-excerpt " href="/2022/08/29/Missing-Semester-%E7%AC%AC2%E8%AE%B2/" target="_self">
         <div>
           
-          空格是用于分隔参数的保留字符 字符串 &quot;&quot;中的变量会被替换，&#39;&#39;中的变量不会被替换 12345foo&#x3D;barecho &quot;$foo&quot;# 打印barecho &amp;#x27;$foo&amp;#x27;# 打印$foo  使用函数 会创建一个文件夹并使用cd进入该文件夹。$1 是脚本第一个参数 完整列表 12345mcd () &amp;#123;    mkdir
         </div>
       </a>
 
@@ -565,17 +616,17 @@
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/2022/08/22/Escape-Room/" target="_self">
           Escape Room
         </a>
-      </h1>
+      </h2>
 
-      <a class="index-excerpt" href="/2022/08/22/Escape-Room/" target="_self">
+      
+      <a class="index-excerpt " href="/2022/08/22/Escape-Room/" target="_self">
         <div>
           
-          数据有些许的恶心人 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586#include &lt;iostream&gt;#i
         </div>
       </a>
 
@@ -611,16 +662,16 @@
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/2022/08/18/%E7%BB%84%E9%98%9F%E8%B5%9B%E8%B5%9B8-18%E8%A1%A5%E9%A2%98/" target="_self">
           组队赛8.18补题
         </a>
-      </h1>
+      </h2>
 
-      <a class="index-excerpt" href="/2022/08/18/%E7%BB%84%E9%98%9F%E8%B5%9B%E8%B5%9B8-18%E8%A1%A5%E9%A2%98/" target="_self">
+      
+      <a class="index-excerpt " href="/2022/08/18/%E7%BB%84%E9%98%9F%E8%B5%9B%E8%B5%9B8-18%E8%A1%A5%E9%A2%98/" target="_self">
         <div>
-          
           
         </div>
       </a>
@@ -650,17 +701,17 @@
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/2022/08/16/22%E5%B1%B1%E4%B8%9C%E7%9C%81%E7%9C%81%E8%B5%9B/" target="_self">
           22山东省省赛
         </a>
-      </h1>
+      </h2>
 
-      <a class="index-excerpt" href="/2022/08/16/22%E5%B1%B1%E4%B8%9C%E7%9C%81%E7%9C%81%E8%B5%9B/" target="_self">
+      
+      <a class="index-excerpt " href="/2022/08/16/22%E5%B1%B1%E4%B8%9C%E7%9C%81%E7%9C%81%E8%B5%9B/" target="_self">
         <div>
           
-          Minimum expression(高精度+DP)__int 128版本 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263#include &lt;iostream&gt;#include &lt;cstring
         </div>
       </a>
 
@@ -690,59 +741,11 @@
     </article>
   </div>
 
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/2022/07/30/%E8%AE%AD%E7%BB%83%E8%B5%9B7-28%E8%A1%A5%E9%A2%98/" target="_self">
-          <img src="/img/post_cover/icpc.jpeg" srcset="/img/loading.gif" lazyload alt="训练赛7.28补题">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2022/07/30/%E8%AE%AD%E7%BB%83%E8%B5%9B7-28%E8%A1%A5%E9%A2%98/" target="_self">
-          训练赛7.28补题
-        </a>
-      </h1>
-
-      <a class="index-excerpt" href="/2022/07/30/%E8%AE%AD%E7%BB%83%E8%B5%9B7-28%E8%A1%A5%E9%A2%98/" target="_self">
-        <div>
-          
-          监控(欧拉函数)谜之题意😅 不如看洛谷的这道题目或者Acwing的 疑惑的题目捏 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950#include &lt;iostream&gt;#include &lt;cstring&gt;#include &lt;algor
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2022-07-30 05:37" pubdate>
-              2022-07-30
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/%E5%9B%BE%E8%AE%BA/">#图论</a>
-            
-              <a href="/tags/%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0/">#欧拉函数</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
 
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/#board">3</a><a class="page-number" href="/page/4/#board">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/#board">13</a><a class="extend next" rel="next" href="/page/3/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/#board">3</a><a class="page-number" href="/page/4/#board">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/#board">14</a><a class="extend next" rel="next" href="/page/3/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 
@@ -816,7 +819,7 @@
   </script>
 
 
-<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
 <script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
 <script  src="/js/events.js" ></script>
 <script  src="/js/plugins.js" ></script>
@@ -836,8 +839,6 @@
       
     })(window, document);
   </script>
-
-
 
 
 

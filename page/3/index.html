@@ -7,8 +7,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/google.png">
-  <link rel="icon" href="/img/google.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
@@ -58,7 +58,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"involutionw.github.io","root":"/","version":"1.9.0","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"involutionw.github.io","root":"/","version":"1.9.5","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -67,6 +67,8 @@
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
+  
+
 
   
 <meta name="generator" content="Hexo 6.0.0"></head>
@@ -102,7 +104,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/">
                 <i class="iconfont icon-home-fill"></i>
-                首页
+                <span>首页</span>
               </a>
             </li>
           
@@ -114,7 +116,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/archives/">
                 <i class="iconfont icon-archive-fill"></i>
-                归档
+                <span>归档</span>
               </a>
             </li>
           
@@ -126,7 +128,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/categories/">
                 <i class="iconfont icon-category-fill"></i>
-                分类
+                <span>分类</span>
               </a>
             </li>
           
@@ -138,7 +140,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/tags/">
                 <i class="iconfont icon-tags-fill"></i>
-                标签
+                <span>标签</span>
               </a>
             </li>
           
@@ -150,7 +152,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/about/">
                 <i class="iconfont icon-user-fill"></i>
-                关于
+                <span>关于</span>
               </a>
             </li>
           
@@ -158,15 +160,16 @@
         
           <li class="nav-item" id="search-btn">
             <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
-              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+              <i class="iconfont icon-search"></i>
             </a>
           </li>
           
         
         
           <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
-                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
           </li>
         
       </ul>
@@ -183,7 +186,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="An elegant Material-Design theme for Hexo"></span>
+            <span id="subtitle" data-typed-text="There is no magic in computer systems"></span>
           
         </div>
 
@@ -219,23 +222,71 @@
     
     
       <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2022/07/30/%E8%AE%AD%E7%BB%83%E8%B5%9B7-28%E8%A1%A5%E9%A2%98/" target="_self">
+          <img src="/img/post_cover/icpc.jpeg" srcset="/img/loading.gif" lazyload alt="训练赛7.28补题">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2022/07/30/%E8%AE%AD%E7%BB%83%E8%B5%9B7-28%E8%A1%A5%E9%A2%98/" target="_self">
+          训练赛7.28补题
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt " href="/2022/07/30/%E8%AE%AD%E7%BB%83%E8%B5%9B7-28%E8%A1%A5%E9%A2%98/" target="_self">
+        <div>
+          
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2022-07-30 05:37" pubdate>
+              2022-07-30
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%9B%BE%E8%AE%BA/">#图论</a>
+            
+              <a href="/tags/%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0/">#欧拉函数</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
         <a href="/2022/07/30/%E8%AE%AD%E7%BB%83%E8%B5%9B7-27%E8%A1%A5%E9%A2%98/" target="_self">
           <img src="/img/post_cover/icpc.jpeg" srcset="/img/loading.gif" lazyload alt="训练赛7.27补题">
         </a>
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/2022/07/30/%E8%AE%AD%E7%BB%83%E8%B5%9B7-27%E8%A1%A5%E9%A2%98/" target="_self">
           训练赛7.27补题
         </a>
-      </h1>
+      </h2>
 
-      <a class="index-excerpt" href="/2022/07/30/%E8%AE%AD%E7%BB%83%E8%B5%9B7-27%E8%A1%A5%E9%A2%98/" target="_self">
+      
+      <a class="index-excerpt " href="/2022/07/30/%E8%AE%AD%E7%BB%83%E8%B5%9B7-27%E8%A1%A5%E9%A2%98/" target="_self">
         <div>
           
-          Minimal payments(记忆化搜索) 1234567891011121314151617181920212223242526272829303132333435#include &lt;iostream&gt;#include &lt;cstring&gt;#include &lt;algorithm&gt;#include &lt;map&gt;using namespace std;
         </div>
       </a>
 
@@ -273,17 +324,17 @@
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/2022/07/30/%E8%AE%AD%E7%BB%83%E8%B5%9B7-25%E8%A1%A5%E9%A2%98/" target="_self">
           训练赛7.25补题
         </a>
-      </h1>
+      </h2>
 
-      <a class="index-excerpt" href="/2022/07/30/%E8%AE%AD%E7%BB%83%E8%B5%9B7-25%E8%A1%A5%E9%A2%98/" target="_self">
+      
+      <a class="index-excerpt " href="/2022/07/30/%E8%AE%AD%E7%BB%83%E8%B5%9B7-25%E8%A1%A5%E9%A2%98/" target="_self">
         <div>
           
-          Dance(DFS)很典型的一道DFS题目，一开始写的大暴力超时了 很明显需要优化 一开始是两层循环，思考可以发现每组的第一个不需要回溯的，回溯增加复杂度 只需回溯第二位即可 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556#include
         </div>
       </a>
 
@@ -323,17 +374,17 @@
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/2022/07/30/%E8%AE%AD%E7%BB%83%E8%B5%9B7-22%E8%A1%A5%E9%A2%98/" target="_self">
           训练赛7.22补题
         </a>
-      </h1>
+      </h2>
 
-      <a class="index-excerpt" href="/2022/07/30/%E8%AE%AD%E7%BB%83%E8%B5%9B7-22%E8%A1%A5%E9%A2%98/" target="_self">
+      
+      <a class="index-excerpt " href="/2022/07/30/%E8%AE%AD%E7%BB%83%E8%B5%9B7-22%E8%A1%A5%E9%A2%98/" target="_self">
         <div>
           
-          土地恢复(贪心)1  组合数(组合数)考察组合数的一道题，可以正常的运用模板 但有一点这道题目需要回答  会溢出long long：mod k 为0时代表为k的倍数 累加求和也会超时：使用前缀和 123456789101112131415161718192021222324252627282930313233343536373839#include &lt;iostream&gt;#include
         </div>
       </a>
 
@@ -375,17 +426,17 @@
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/2022/07/30/%E8%AE%AD%E7%BB%83%E8%B5%9B7-21%E8%A1%A5%E9%A2%98/" target="_self">
           训练赛7.21补题
         </a>
-      </h1>
+      </h2>
 
-      <a class="index-excerpt" href="/2022/07/30/%E8%AE%AD%E7%BB%83%E8%B5%9B7-21%E8%A1%A5%E9%A2%98/" target="_self">
+      
+      <a class="index-excerpt " href="/2022/07/30/%E8%AE%AD%E7%BB%83%E8%B5%9B7-21%E8%A1%A5%E9%A2%98/" target="_self">
         <div>
           
-          Piggyback(最短路)bfs跑两遍，B从1开始 E从2开始 bfs反向从n开始跑图 枚举distb[i]+diste[i]+dist[i] 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768
         </div>
       </a>
 
@@ -421,17 +472,17 @@
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/2022/07/30/%E8%AE%AD%E7%BB%83%E8%B5%9B7-20%E8%A1%A5%E9%A2%98/" target="_self">
           训练赛7.20补题
         </a>
-      </h1>
+      </h2>
 
-      <a class="index-excerpt" href="/2022/07/30/%E8%AE%AD%E7%BB%83%E8%B5%9B7-20%E8%A1%A5%E9%A2%98/" target="_self">
+      
+      <a class="index-excerpt " href="/2022/07/30/%E8%AE%AD%E7%BB%83%E8%B5%9B7-20%E8%A1%A5%E9%A2%98/" target="_self">
         <div>
           
-          二师兄的纪录片(最短路)不建图竟然会超时哭了 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293
         </div>
       </a>
 
@@ -460,17 +511,17 @@
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/2022/07/30/%E8%AE%AD%E7%BB%83%E8%B5%9B7-19%E8%A1%A5%E9%A2%98/" target="_self">
           训练赛7.19补题
         </a>
-      </h1>
+      </h2>
 
-      <a class="index-excerpt" href="/2022/07/30/%E8%AE%AD%E7%BB%83%E8%B5%9B7-19%E8%A1%A5%E9%A2%98/" target="_self">
+      
+      <a class="index-excerpt " href="/2022/07/30/%E8%AE%AD%E7%BB%83%E8%B5%9B7-19%E8%A1%A5%E9%A2%98/" target="_self">
         <div>
           
-          魔法部落(快速幂) 12345678910111213141516171819202122232425262728293031#include &lt;iostream&gt;#include &lt;cstring&gt;#include &lt;algorithm&gt;using namespace std;typedef long long LL;const int mod &#x3D; 1e9+7
         </div>
       </a>
 
@@ -514,17 +565,17 @@
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/2022/07/15/%E8%AE%AD%E7%BB%83%E8%B5%9B7-15%E8%A1%A5%E9%A2%98/" target="_self">
           训练赛7.15补题
         </a>
-      </h1>
+      </h2>
 
-      <a class="index-excerpt" href="/2022/07/15/%E8%AE%AD%E7%BB%83%E8%B5%9B7-15%E8%A1%A5%E9%A2%98/" target="_self">
+      
+      <a class="index-excerpt " href="/2022/07/15/%E8%AE%AD%E7%BB%83%E8%B5%9B7-15%E8%A1%A5%E9%A2%98/" target="_self">
         <div>
           
-          防御法阵2-variable Function(二分)这题的数据必须全部开LL不然会有很大的问题 1234567891011121314151617181920212223242526272829303132333435#include &lt;iostream&gt;#include &lt;cstring&gt;#include &lt;algorithm&gt;using namespace
         </div>
       </a>
 
@@ -564,17 +615,17 @@
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/2022/07/14/%E8%AE%AD%E7%BB%83%E8%B5%9B7-14%E8%A1%A5%E9%A2%98/" target="_self">
           训练赛7.14补题
         </a>
-      </h1>
+      </h2>
 
-      <a class="index-excerpt" href="/2022/07/14/%E8%AE%AD%E7%BB%83%E8%B5%9B7-14%E8%A1%A5%E9%A2%98/" target="_self">
+      
+      <a class="index-excerpt " href="/2022/07/14/%E8%AE%AD%E7%BB%83%E8%B5%9B7-14%E8%A1%A5%E9%A2%98/" target="_self">
         <div>
           
-          Max Min(二分， 状态压缩DP)f[i][0&#x2F;1][0&#x2F;1] 考虑前i个数，当前这个状态是否选x，当前这个状态是否选y，选取的方案数只考虑大于等于x，小于等于y，0&#x2F;1表示是否选x y 123456789101112131415161718192021222324252627282930#include &lt;iostream&gt;#include &lt;cstring&amp;gt
         </div>
       </a>
 
@@ -618,17 +669,17 @@
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/2022/07/13/%E6%BB%91%E9%9B%AA/" target="_self">
           滑雪
         </a>
-      </h1>
+      </h2>
 
-      <a class="index-excerpt" href="/2022/07/13/%E6%BB%91%E9%9B%AA/" target="_self">
+      
+      <a class="index-excerpt " href="/2022/07/13/%E6%BB%91%E9%9B%AA/" target="_self">
         <div>
           
-          1234567891011121314151617181920212223242526272829303132333435363738394041424344#include &lt;iostream&gt;#include &lt;cstring&gt;#include &lt;algorithm&gt;using namespace std;const int N &#x3D; 310;int h[N]
         </div>
       </a>
 
@@ -654,65 +705,11 @@
     </article>
   </div>
 
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/2022/07/13/%E8%AE%AD%E7%BB%83%E8%B5%9B7-13%E8%A1%A5%E9%A2%98/" target="_self">
-          <img src="/img/post_cover/icpc.jpeg" srcset="/img/loading.gif" lazyload alt="训练赛7.13补题">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2022/07/13/%E8%AE%AD%E7%BB%83%E8%B5%9B7-13%E8%A1%A5%E9%A2%98/" target="_self">
-          训练赛7.13补题
-        </a>
-      </h1>
-
-      <a class="index-excerpt" href="/2022/07/13/%E8%AE%AD%E7%BB%83%E8%B5%9B7-13%E8%A1%A5%E9%A2%98/" target="_self">
-        <div>
-          
-          Acoder 248 Range Count Query(二分, STL)STL123456789101112131415161718192021222324252627282930#include &lt;iostream&gt;#include &lt;cstring&gt;#include &lt;algorithm&gt;#include &lt;vector&gt;using names
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2022-07-13 07:23" pubdate>
-              2022-07-13
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/">#背包问题</a>
-            
-              <a href="/tags/%E7%8A%B6%E6%80%81%E5%8E%8B%E7%BC%A9DP/">#状态压缩DP</a>
-            
-              <a href="/tags/%E4%BA%8C%E5%88%86/">#二分</a>
-            
-              <a href="/tags/%E8%A1%A5%E9%A2%98/">#补题</a>
-            
-              <a href="/tags/%E8%AE%AD%E7%BB%83%E8%B5%9B/">#训练赛</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
 
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/page/2/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/#board">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/#board">4</a><a class="page-number" href="/page/5/#board">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/#board">13</a><a class="extend next" rel="next" href="/page/4/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/page/2/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/#board">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/#board">4</a><a class="page-number" href="/page/5/#board">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/#board">14</a><a class="extend next" rel="next" href="/page/4/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 
@@ -786,7 +783,7 @@
   </script>
 
 
-<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
 <script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
 <script  src="/js/events.js" ></script>
 <script  src="/js/plugins.js" ></script>
@@ -806,8 +803,6 @@
       
     })(window, document);
   </script>
-
-
 
 
 

@@ -7,8 +7,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/google.png">
-  <link rel="icon" href="/img/google.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
@@ -58,7 +58,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"involutionw.github.io","root":"/","version":"1.9.0","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"involutionw.github.io","root":"/","version":"1.9.5","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -67,6 +67,8 @@
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
+  
+
 
   
 <meta name="generator" content="Hexo 6.0.0"></head>
@@ -102,7 +104,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/">
                 <i class="iconfont icon-home-fill"></i>
-                首页
+                <span>首页</span>
               </a>
             </li>
           
@@ -114,7 +116,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/archives/">
                 <i class="iconfont icon-archive-fill"></i>
-                归档
+                <span>归档</span>
               </a>
             </li>
           
@@ -126,7 +128,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/categories/">
                 <i class="iconfont icon-category-fill"></i>
-                分类
+                <span>分类</span>
               </a>
             </li>
           
@@ -138,7 +140,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/tags/">
                 <i class="iconfont icon-tags-fill"></i>
-                标签
+                <span>标签</span>
               </a>
             </li>
           
@@ -150,7 +152,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/about/">
                 <i class="iconfont icon-user-fill"></i>
-                关于
+                <span>关于</span>
               </a>
             </li>
           
@@ -158,15 +160,16 @@
         
           <li class="nav-item" id="search-btn">
             <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
-              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+              <i class="iconfont icon-search"></i>
             </a>
           </li>
           
         
         
           <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
-                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
           </li>
         
       </ul>
@@ -183,7 +186,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="An elegant Material-Design theme for Hexo"></span>
+            <span id="subtitle" data-typed-text="There is no magic in computer systems"></span>
           
         </div>
 
@@ -219,22 +222,61 @@
     
     
       <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2022/02/22/%E8%82%A1%E7%A5%A8%E4%B9%B0%E5%8D%96-V/" target="_self">
+          <img src="/img/post_cover/icpc.jpeg" srcset="/img/loading.gif" lazyload alt="股票买卖 V">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2022/02/22/%E8%82%A1%E7%A5%A8%E4%B9%B0%E5%8D%96-V/" target="_self">
+          股票买卖 V
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt " href="/2022/02/22/%E8%82%A1%E7%A5%A8%E4%B9%B0%E5%8D%96-V/" target="_self">
+        <div>
+          
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2022-02-22 12:19" pubdate>
+              2022-02-22
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
         <a href="/2022/02/22/%E8%82%A1%E7%A5%A8%E4%B9%B0%E5%8D%96-IV/" target="_self">
           <img src="/img/post_cover/icpc.jpeg" srcset="/img/loading.gif" lazyload alt="股票买卖 IV">
         </a>
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/2022/02/22/%E8%82%A1%E7%A5%A8%E4%B9%B0%E5%8D%96-IV/" target="_self">
           股票买卖 IV
         </a>
-      </h1>
+      </h2>
 
-      <a class="index-excerpt" href="/2022/02/22/%E8%82%A1%E7%A5%A8%E4%B9%B0%E5%8D%96-IV/" target="_self">
+      
+      <a class="index-excerpt " href="/2022/02/22/%E8%82%A1%E7%A5%A8%E4%B9%B0%E5%8D%96-IV/" target="_self">
         <div>
-          
           题目
         </div>
       </a>
@@ -310,16 +352,16 @@
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/2022/02/22/%E5%A4%A7%E7%9B%97%E9%98%BF%E7%A6%8F/" target="_self">
           大盗阿福
         </a>
-      </h1>
+      </h2>
 
-      <a class="index-excerpt" href="/2022/02/22/%E5%A4%A7%E7%9B%97%E9%98%BF%E7%A6%8F/" target="_self">
+      
+      <a class="index-excerpt " href="/2022/02/22/%E5%A4%A7%E7%9B%97%E9%98%BF%E7%A6%8F/" target="_self">
         <div>
-          
           题目
         </div>
       </a>
@@ -395,16 +437,16 @@
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/2022/02/22/%E9%87%91%E6%98%8E%E7%9A%84%E9%A2%84%E7%AE%97%E6%96%B9%E6%A1%88/" target="_self">
           金明的预算方案
         </a>
-      </h1>
+      </h2>
 
-      <a class="index-excerpt" href="/2022/02/22/%E9%87%91%E6%98%8E%E7%9A%84%E9%A2%84%E7%AE%97%E6%96%B9%E6%A1%88/" target="_self">
+      
+      <a class="index-excerpt " href="/2022/02/22/%E9%87%91%E6%98%8E%E7%9A%84%E9%A2%84%E7%AE%97%E6%96%B9%E6%A1%88/" target="_self">
         <div>
-          
           题目
         </div>
       </a>
@@ -434,16 +476,16 @@
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/2022/02/22/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E6%B1%82%E5%85%B7%E4%BD%93%E6%96%B9%E6%A1%88/" target="_self">
           背包问题求具体方案
         </a>
-      </h1>
+      </h2>
 
-      <a class="index-excerpt" href="/2022/02/22/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E6%B1%82%E5%85%B7%E4%BD%93%E6%96%B9%E6%A1%88/" target="_self">
+      
+      <a class="index-excerpt " href="/2022/02/22/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E6%B1%82%E5%85%B7%E4%BD%93%E6%96%B9%E6%A1%88/" target="_self">
         <div>
-          
           题目
         </div>
       </a>
@@ -519,16 +561,16 @@
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/2022/02/22/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E6%B1%82%E6%96%B9%E6%A1%88%E6%95%B0/" target="_self">
           背包问题求方案数
         </a>
-      </h1>
+      </h2>
 
-      <a class="index-excerpt" href="/2022/02/22/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E6%B1%82%E6%96%B9%E6%A1%88%E6%95%B0/" target="_self">
+      
+      <a class="index-excerpt " href="/2022/02/22/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E6%B1%82%E6%96%B9%E6%A1%88%E6%95%B0/" target="_self">
         <div>
-          
           题目 有关背包问题初始化
         </div>
       </a>
@@ -604,16 +646,16 @@
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/2022/02/22/%E6%9C%89%E4%BE%9D%E8%B5%96%E7%9A%84%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/" target="_self">
           有依赖的背包问题
         </a>
-      </h1>
+      </h2>
 
-      <a class="index-excerpt" href="/2022/02/22/%E6%9C%89%E4%BE%9D%E8%B5%96%E7%9A%84%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/" target="_self">
+      
+      <a class="index-excerpt " href="/2022/02/22/%E6%9C%89%E4%BE%9D%E8%B5%96%E7%9A%84%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/" target="_self">
         <div>
-          
           洛谷ACW
         </div>
       </a>
@@ -685,16 +727,16 @@
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/2022/02/18/%E5%AF%86%E7%A0%81%E8%84%B1%E8%90%BD/" target="_self">
           密码脱落
         </a>
-      </h1>
+      </h2>
 
-      <a class="index-excerpt" href="/2022/02/18/%E5%AF%86%E7%A0%81%E8%84%B1%E8%90%BD/" target="_self">
+      
+      <a class="index-excerpt " href="/2022/02/18/%E5%AF%86%E7%A0%81%E8%84%B1%E8%90%BD/" target="_self">
         <div>
-          
           题目
         </div>
       </a>
@@ -770,16 +812,16 @@
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/2022/02/18/%E7%B3%96%E6%9E%9C/" target="_self">
           糖果
         </a>
-      </h1>
+      </h2>
 
-      <a class="index-excerpt" href="/2022/02/18/%E7%B3%96%E6%9E%9C/" target="_self">
+      
+      <a class="index-excerpt " href="/2022/02/18/%E7%B3%96%E6%9E%9C/" target="_self">
         <div>
-          
           题目
         </div>
       </a>
@@ -809,17 +851,17 @@
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/2022/02/18/Restoring-Road-Network/" target="_self">
           Restoring Road Network
         </a>
-      </h1>
+      </h2>
 
-      <a class="index-excerpt" href="/2022/02/18/Restoring-Road-Network/" target="_self">
+      
+      <a class="index-excerpt " href="/2022/02/18/Restoring-Road-Network/" target="_self">
         <div>
           
-          问题 G: Restoring Road Network时间限制: 1.000 Sec  内存限制: 128 MB 题目描述In Takahashi Kingdom, which once existed, there are N cities, and some pairs of cities are connected bidirectionally by roads. The followi
         </div>
       </a>
 
@@ -891,103 +933,11 @@
     </article>
   </div>
 
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/2022/02/17/%E9%B8%A3%E4%BA%BA%E7%9A%84%E5%BD%B1%E5%88%86%E8%BA%AB/" target="_self">
-          <img src="/img/post_cover/icpc.jpeg" srcset="/img/loading.gif" lazyload alt="鸣人的影分身">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2022/02/17/%E9%B8%A3%E4%BA%BA%E7%9A%84%E5%BD%B1%E5%88%86%E8%BA%AB/" target="_self">
-          鸣人的影分身
-        </a>
-      </h1>
-
-      <a class="index-excerpt" href="/2022/02/17/%E9%B8%A3%E4%BA%BA%E7%9A%84%E5%BD%B1%E5%88%86%E8%BA%AB/" target="_self">
-        <div>
-          
-          1234567891011121314151617181920212223242526272829303132#include &lt;iostream&gt;#include &lt;cstring&gt;#include &lt;algorithm&gt;using namespace std;const int N &#x3D; 15;int n, m;int f[N][N];int main(
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2022-02-17 21:35" pubdate>
-              2022-02-17
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/%E7%AE%97%E6%B3%95/" class="category-chain-item">算法</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/%E7%AE%97%E6%B3%95/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" class="category-chain-item">动态规划</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/%E7%AE%97%E6%B3%95/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/" class="category-chain-item">背包问题</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/%E7%AE%97%E6%B3%95/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/%E8%83%8C%E5%8C%85%E6%B1%82%E6%96%B9%E6%A1%88%E6%95%B0/" class="category-chain-item">背包求方案数</a>
-  
-  
-
-  
-
-  
-
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/%E7%AE%97%E6%B3%95/">#算法</a>
-            
-              <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">#动态规划</a>
-            
-              <a href="/tags/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/">#背包问题</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
 
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/page/11/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/#board">10</a><a class="page-number" href="/page/11/#board">11</a><span class="page-number current">12</span><a class="page-number" href="/page/13/#board">13</a><a class="extend next" rel="next" href="/page/13/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/page/11/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/#board">10</a><a class="page-number" href="/page/11/#board">11</a><span class="page-number current">12</span><a class="page-number" href="/page/13/#board">13</a><a class="page-number" href="/page/14/#board">14</a><a class="extend next" rel="next" href="/page/13/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 
@@ -1061,7 +1011,7 @@
   </script>
 
 
-<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
 <script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
 <script  src="/js/events.js" ></script>
 <script  src="/js/plugins.js" ></script>
@@ -1081,8 +1031,6 @@
       
     })(window, document);
   </script>
-
-
 
 
 

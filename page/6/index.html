@@ -7,8 +7,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/google.png">
-  <link rel="icon" href="/img/google.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
@@ -58,7 +58,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"involutionw.github.io","root":"/","version":"1.9.0","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"involutionw.github.io","root":"/","version":"1.9.5","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -67,6 +67,8 @@
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
+  
+
 
   
 <meta name="generator" content="Hexo 6.0.0"></head>
@@ -102,7 +104,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/">
                 <i class="iconfont icon-home-fill"></i>
-                首页
+                <span>首页</span>
               </a>
             </li>
           
@@ -114,7 +116,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/archives/">
                 <i class="iconfont icon-archive-fill"></i>
-                归档
+                <span>归档</span>
               </a>
             </li>
           
@@ -126,7 +128,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/categories/">
                 <i class="iconfont icon-category-fill"></i>
-                分类
+                <span>分类</span>
               </a>
             </li>
           
@@ -138,7 +140,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/tags/">
                 <i class="iconfont icon-tags-fill"></i>
-                标签
+                <span>标签</span>
               </a>
             </li>
           
@@ -150,7 +152,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/about/">
                 <i class="iconfont icon-user-fill"></i>
-                关于
+                <span>关于</span>
               </a>
             </li>
           
@@ -158,15 +160,16 @@
         
           <li class="nav-item" id="search-btn">
             <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
-              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+              <i class="iconfont icon-search"></i>
             </a>
           </li>
           
         
         
           <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
-                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
           </li>
         
       </ul>
@@ -183,7 +186,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="An elegant Material-Design theme for Hexo"></span>
+            <span id="subtitle" data-typed-text="There is no magic in computer systems"></span>
           
         </div>
 
@@ -219,23 +222,97 @@
     
     
       <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2022/04/11/DFS%E4%B9%8B%E6%90%9C%E7%B4%A2%E9%A1%BA%E5%BA%8F/" target="_self">
+          <img src="/img/post_cover/icpc.jpeg" srcset="/img/loading.gif" lazyload alt="DFS之搜索顺序">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2022/04/11/DFS%E4%B9%8B%E6%90%9C%E7%B4%A2%E9%A1%BA%E5%BA%8F/" target="_self">
+          DFS之搜索顺序
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt " href="/2022/04/11/DFS%E4%B9%8B%E6%90%9C%E7%B4%A2%E9%A1%BA%E5%BA%8F/" target="_self">
+        <div>
+          
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2022-04-11 19:09" pubdate>
+              2022-04-11
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E7%AE%97%E6%B3%95/" class="category-chain-item">算法</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E7%AE%97%E6%B3%95/DFS/" class="category-chain-item">DFS</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/DFS/">#DFS</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
         <a href="/2022/04/10/Educational-Codeforces-Round-127-Rated-for-Div-2/" target="_self">
           <img src="/img/post_cover/icpc.jpeg" srcset="/img/loading.gif" lazyload alt="Educational Codeforces Round 127 (Rated for Div. 2)">
         </a>
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/2022/04/10/Educational-Codeforces-Round-127-Rated-for-Div-2/" target="_self">
           Educational Codeforces Round 127 (Rated for Div. 2)
         </a>
-      </h1>
+      </h2>
 
-      <a class="index-excerpt" href="/2022/04/10/Educational-Codeforces-Round-127-Rated-for-Div-2/" target="_self">
+      
+      <a class="index-excerpt " href="/2022/04/10/Educational-Codeforces-Round-127-Rated-for-Div-2/" target="_self">
         <div>
           
-          链接 A. Array Balancing贪心 每一次考虑是否交换，只要判断哪个带来的影响最小进行 123456789101112131415161718192021222324252627282930313233343536#include &lt;iostream&gt;#include &lt;cstring&gt;#include &lt;algorithm&gt;#include &amp;lt
         </div>
       </a>
 
@@ -292,17 +369,17 @@
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/2022/04/10/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E7%9A%84%E6%89%A9%E5%B1%95%E5%BA%94%E7%94%A8/" target="_self">
           最小生成树的扩展应用
         </a>
-      </h1>
+      </h2>
 
-      <a class="index-excerpt" href="/2022/04/10/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E7%9A%84%E6%89%A9%E5%B1%95%E5%BA%94%E7%94%A8/" target="_self">
+      
+      <a class="index-excerpt " href="/2022/04/10/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E7%9A%84%E6%89%A9%E5%B1%95%E5%BA%94%E7%94%A8/" target="_self">
         <div>
           
-          例一(新的开始)(虚拟源点)题目 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859#include &lt;iostream&gt;#include &lt;cstring&gt;#include &lt;algorithm&amp;gt
         </div>
       </a>
 
@@ -340,17 +417,17 @@
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/2022/04/10/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/" target="_self">
           最小生成树
         </a>
-      </h1>
+      </h2>
 
-      <a class="index-excerpt" href="/2022/04/10/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/" target="_self">
+      
+      <a class="index-excerpt " href="/2022/04/10/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/" target="_self">
         <div>
           
-          例一题目prim 1234567891011121314151617181920212223242526272829303132333435363738394041424344#include &lt;iostream&gt;#include &lt;cstring&gt;#include &lt;algorithm&gt;using namespace std;const int N &#x3D; 110
         </div>
       </a>
 
@@ -386,17 +463,17 @@
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/2022/04/09/%E6%9D%8E%E7%99%BD%E6%89%93%E9%85%92/" target="_self">
           李白打酒
         </a>
-      </h1>
+      </h2>
 
-      <a class="index-excerpt" href="/2022/04/09/%E6%9D%8E%E7%99%BD%E6%89%93%E9%85%92/" target="_self">
+      
+      <a class="index-excerpt " href="/2022/04/09/%E6%9D%8E%E7%99%BD%E6%89%93%E9%85%92/" target="_self">
         <div>
           
-          题目  状态表示f[i, j, sum] i步，经过j个店，剩余的酒是sum； 在比赛的时候只考虑到前两维状态，想着酒的量不好计算，就没细思考，就使dfs暴力搜索出来 酒的数量不会超过n+m。啊啊啊啊啊啊啊怎么没想到啊啊啊啊啊啊啊啊 状态计算f[i, j, sum] +&#x3D; f[i-1, j, sum-1] f[i, j, sum] +&#x3D; f[i-1, j-1, sum&#x2F;2] sum需要是2的倍数
         </div>
       </a>
 
@@ -432,17 +509,17 @@
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/2022/04/07/Space-Elevator-%E5%A4%AA%E7%A9%BA%E7%94%B5%E6%A2%AF/" target="_self">
           Space Elevator 太空电梯
         </a>
-      </h1>
+      </h2>
 
-      <a class="index-excerpt" href="/2022/04/07/Space-Elevator-%E5%A4%AA%E7%A9%BA%E7%94%B5%E6%A2%AF/" target="_self">
+      
+      <a class="index-excerpt " href="/2022/04/07/Space-Elevator-%E5%A4%AA%E7%A9%BA%E7%94%B5%E6%A2%AF/" target="_self">
         <div>
           
-          题目 状态表示f[i][j] 只考虑前i个且高度不超过j的所有集合 属性：bool 是否可以到达该高度 状态转移f[i][j] |&#x3D; f[i-1][j-k*h[i]] 要满足j&gt;&#x3D;k*h[i] 想法一开始看到这个题，像是多重背包，所以就先写了一个模板看看行不行结果就是 出现不可能更新的情况f[i][j] &#x3D; max(f[i-1][j - k*h[i]] + k*h[i]) 这个状态表示不可取
         </div>
       </a>
 
@@ -471,17 +548,17 @@
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/2022/04/05/%E6%9C%80%E7%9F%ADHamilton%E8%B7%AF%E5%BE%84/" target="_self">
           最短Hamilton路径
         </a>
-      </h1>
+      </h2>
 
-      <a class="index-excerpt" href="/2022/04/05/%E6%9C%80%E7%9F%ADHamilton%E8%B7%AF%E5%BE%84/" target="_self">
+      
+      <a class="index-excerpt " href="/2022/04/05/%E6%9C%80%E7%9F%ADHamilton%E8%B7%AF%E5%BE%84/" target="_self">
         <div>
           
-          题目  初始化f[1, 0] 表示走过0且到第0号点的集合 只有这个状态合法（或者 f[0, 0] 没有走过任何一个点 且到0号点的集合） DP的过程先循环状态，为什么呢？ 因为通过状态转移方程可以看出更新一个点，都是利用之前的状态更新 1234567891011121314151617181920212223242526272829303132#include &lt;iostream&gt;#
         </div>
       </a>
 
@@ -552,17 +629,17 @@
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/2022/04/03/Codeforces-Round-780-Div-3/" target="_self">
           Codeforces-Round-780-Div-3
         </a>
-      </h1>
+      </h2>
 
-      <a class="index-excerpt" href="/2022/04/03/Codeforces-Round-780-Div-3/" target="_self">
+      
+      <a class="index-excerpt " href="/2022/04/03/Codeforces-Round-780-Div-3/" target="_self">
         <div>
           
-          A. Vasya and Coins思维题稍加思考就可以得出 每次先用1 用完在再把1替换成2循环往复直达2用完 1234567891011121314151617181920212223242526#include&lt;iostream&gt;#include&lt;cstdio&gt;#include&lt;cstring&gt;#include&lt;algorithm&gt;using
         </div>
       </a>
 
@@ -619,17 +696,17 @@
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/2022/04/02/Problematic-Picasso/" target="_self">
           Problematic Picasso
         </a>
-      </h1>
+      </h2>
 
-      <a class="index-excerpt" href="/2022/04/02/Problematic-Picasso/" target="_self">
+      
+      <a class="index-excerpt " href="/2022/04/02/Problematic-Picasso/" target="_self">
         <div>
           
-          题目问题 B: Problematic Picasso时间限制: 1.000 Sec  内存限制: 128 MB 题目描述Picasso’s daughter and protégé, Katie, has just finished painting several masterpieces and she is ready to sell them to the highest bidder.
         </div>
       </a>
 
@@ -667,17 +744,17 @@
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/2022/03/29/%E5%A4%9A%E6%BA%90%E6%B1%87%E6%9C%80%E7%9F%AD%E8%B7%AF/" target="_self">
           多源汇最短路
         </a>
-      </h1>
+      </h2>
 
-      <a class="index-excerpt" href="/2022/03/29/%E5%A4%9A%E6%BA%90%E6%B1%87%E6%9C%80%E7%9F%AD%E8%B7%AF/" target="_self">
+      
+      <a class="index-excerpt " href="/2022/03/29/%E5%A4%9A%E6%BA%90%E6%B1%87%E6%9C%80%E7%9F%AD%E8%B7%AF/" target="_self">
         <div>
           
-          Floyd最短路传递闭包找最小环恰好经过K条边的最短路径 原理(DP)状态表示d[k, i, j] 集合： 所有从i出发最终走到j且中间只经过节点编号不超过k的路径(考虑的是中间不包含i j的节点)属性： 最小值 状态计算所有不包含节点k的路径d[k-1, i, j]所有包含节点k的路径d[k-1, i, k] + d[k-1, k, j] 例一 1234567891011121314151617
         </div>
       </a>
 
@@ -703,78 +780,11 @@
     </article>
   </div>
 
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/2022/03/27/Codeforces-Round-764-Div-3/" target="_self">
-          <img src="/img/post_cover/icpc.jpeg" srcset="/img/loading.gif" lazyload alt="Codeforces Round">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2022/03/27/Codeforces-Round-764-Div-3/" target="_self">
-          Codeforces Round
-        </a>
-      </h1>
-
-      <a class="index-excerpt" href="/2022/03/27/Codeforces-Round-764-Div-3/" target="_self">
-        <div>
-          
-          题目A. Plus One on the Subset语法题不多说 123456789101112131415161718192021#include &lt;iostream&gt;#include &lt;cstring&gt;#include &lt;algorithm&gt;using namespace std;const int N &#x3D; 10010;int n, m;int a[N];
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2022-03-27 19:17" pubdate>
-              2022-03-27
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/codeforces/" class="category-chain-item">codeforces</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/codeforces/">#codeforces</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
 
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/page/5/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/#board">4</a><a class="page-number" href="/page/5/#board">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/#board">7</a><a class="page-number" href="/page/8/#board">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/#board">13</a><a class="extend next" rel="next" href="/page/7/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/page/5/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/#board">4</a><a class="page-number" href="/page/5/#board">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/#board">7</a><a class="page-number" href="/page/8/#board">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/#board">14</a><a class="extend next" rel="next" href="/page/7/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 
@@ -848,7 +858,7 @@
   </script>
 
 
-<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
 <script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
 <script  src="/js/events.js" ></script>
 <script  src="/js/plugins.js" ></script>
@@ -868,8 +878,6 @@
       
     })(window, document);
   </script>
-
-
 
 
 

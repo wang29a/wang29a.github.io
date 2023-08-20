@@ -7,8 +7,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/google.png">
-  <link rel="icon" href="/img/google.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
@@ -58,7 +58,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"involutionw.github.io","root":"/","version":"1.9.0","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"involutionw.github.io","root":"/","version":"1.9.5","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -67,6 +67,8 @@
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
+  
+
 
   
 <meta name="generator" content="Hexo 6.0.0"></head>
@@ -102,7 +104,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/">
                 <i class="iconfont icon-home-fill"></i>
-                首页
+                <span>首页</span>
               </a>
             </li>
           
@@ -114,7 +116,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/archives/">
                 <i class="iconfont icon-archive-fill"></i>
-                归档
+                <span>归档</span>
               </a>
             </li>
           
@@ -126,7 +128,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/categories/">
                 <i class="iconfont icon-category-fill"></i>
-                分类
+                <span>分类</span>
               </a>
             </li>
           
@@ -138,7 +140,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/tags/">
                 <i class="iconfont icon-tags-fill"></i>
-                标签
+                <span>标签</span>
               </a>
             </li>
           
@@ -150,7 +152,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/about/">
                 <i class="iconfont icon-user-fill"></i>
-                关于
+                <span>关于</span>
               </a>
             </li>
           
@@ -158,15 +160,16 @@
         
           <li class="nav-item" id="search-btn">
             <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
-              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+              <i class="iconfont icon-search"></i>
             </a>
           </li>
           
         
         
           <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
-                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
           </li>
         
       </ul>
@@ -183,7 +186,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="An elegant Material-Design theme for Hexo"></span>
+            <span id="subtitle" data-typed-text="There is no magic in computer systems"></span>
           
         </div>
 
@@ -219,23 +222,77 @@
     
     
       <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2022/07/13/%E8%AE%AD%E7%BB%83%E8%B5%9B7-13%E8%A1%A5%E9%A2%98/" target="_self">
+          <img src="/img/post_cover/icpc.jpeg" srcset="/img/loading.gif" lazyload alt="训练赛7.13补题">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2022/07/13/%E8%AE%AD%E7%BB%83%E8%B5%9B7-13%E8%A1%A5%E9%A2%98/" target="_self">
+          训练赛7.13补题
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt " href="/2022/07/13/%E8%AE%AD%E7%BB%83%E8%B5%9B7-13%E8%A1%A5%E9%A2%98/" target="_self">
+        <div>
+          
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2022-07-13 07:23" pubdate>
+              2022-07-13
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/">#背包问题</a>
+            
+              <a href="/tags/%E7%8A%B6%E6%80%81%E5%8E%8B%E7%BC%A9DP/">#状态压缩DP</a>
+            
+              <a href="/tags/%E4%BA%8C%E5%88%86/">#二分</a>
+            
+              <a href="/tags/%E8%A1%A5%E9%A2%98/">#补题</a>
+            
+              <a href="/tags/%E8%AE%AD%E7%BB%83%E8%B5%9B/">#训练赛</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
         <a href="/2022/07/11/%E8%AE%AD%E7%BB%83%E8%B5%9B7-11%E8%A1%A5%E9%A2%98/" target="_self">
           <img src="/img/post_cover/icpc.jpeg" srcset="/img/loading.gif" lazyload alt="训练赛7.11补题">
         </a>
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/2022/07/11/%E8%AE%AD%E7%BB%83%E8%B5%9B7-11%E8%A1%A5%E9%A2%98/" target="_self">
           训练赛7.11补题
         </a>
-      </h1>
+      </h2>
 
-      <a class="index-excerpt" href="/2022/07/11/%E8%AE%AD%E7%BB%83%E8%B5%9B7-11%E8%A1%A5%E9%A2%98/" target="_self">
+      
+      <a class="index-excerpt " href="/2022/07/11/%E8%AE%AD%E7%BB%83%E8%B5%9B7-11%E8%A1%A5%E9%A2%98/" target="_self">
         <div>
           
-          Prefix Equality (哈希)对每一个数进行哈希，然后求取前缀和，重复出现的忽略用了mt19937 mrand随机数，来进行哈希，需要用万能头文件过编译 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051#include &lt;bits&#x2F;stdc++.
         </div>
       </a>
 
@@ -277,17 +334,17 @@
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/2022/05/15/git/" target="_self">
           git
         </a>
-      </h1>
+      </h2>
 
-      <a class="index-excerpt" href="/2022/05/15/git/" target="_self">
+      
+      <a class="index-excerpt " href="/2022/05/15/git/" target="_self">
         <div>
           
-          配置全局代理1git config --global http.proxy ……  取消代理1git config --global --unset http.proxy
         </div>
       </a>
 
@@ -323,17 +380,17 @@
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/2022/05/14/opencv%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" target="_self">
           opencv学习笔记
         </a>
-      </h1>
+      </h2>
 
-      <a class="index-excerpt" href="/2022/05/14/opencv%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" target="_self">
+      
+      <a class="index-excerpt " href="/2022/05/14/opencv%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" target="_self">
         <div>
           
-          视频 配置Chapter 1 - Read Images Videos and Webcams一般只包含三个头文件 123#include &lt;opencv2&#x2F;imgcodecs.hpp&gt;#include &lt;opencv2&#x2F;highgui.hpp&gt;#include &lt;opencv2&#x2F;imgproc.hpp&gt;  打开图片Mat opencv内置的图像数据类型，用于打
         </div>
       </a>
 
@@ -392,16 +449,16 @@
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/2022/05/11/%E7%A7%8D%E6%A0%91-1/" target="_self">
           种树
         </a>
-      </h1>
+      </h2>
 
-      <a class="index-excerpt" href="/2022/05/11/%E7%A7%8D%E6%A0%91-1/" target="_self">
+      
+      <a class="index-excerpt " href="/2022/05/11/%E7%A7%8D%E6%A0%91-1/" target="_self">
         <div>
-          
           题目
         </div>
       </a>
@@ -438,17 +495,17 @@
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/2022/05/07/%E7%A8%B3%E5%AE%9A%E5%A9%9A%E5%A7%BB/" target="_self">
           稳定婚姻
         </a>
-      </h1>
+      </h2>
 
-      <a class="index-excerpt" href="/2022/05/07/%E7%A8%B3%E5%AE%9A%E5%A9%9A%E5%A7%BB/" target="_self">
+      
+      <a class="index-excerpt " href="/2022/05/07/%E7%A8%B3%E5%AE%9A%E5%A9%9A%E5%A7%BB/" target="_self">
         <div>
           
-          题目 这题的难点主要在建图上，通过分析题目可以知道 题目的要求就是让我们判断是否可以成环，跑一边tarjan就行 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576
         </div>
       </a>
 
@@ -514,16 +571,16 @@
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/2022/05/02/%E5%88%B7%E9%A2%98-DP/" target="_self">
           刷题-DP
         </a>
-      </h1>
+      </h2>
 
-      <a class="index-excerpt" href="/2022/05/02/%E5%88%B7%E9%A2%98-DP/" target="_self">
+      
+      <a class="index-excerpt " href="/2022/05/02/%E5%88%B7%E9%A2%98-DP/" target="_self">
         <div>
-          
           DP我真的好喜欢你啊，为了你我要听做DP题。
         </div>
       </a>
@@ -560,17 +617,17 @@
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/2022/05/02/CF%E5%9B%BE%E8%AE%BA%E5%88%B7%E9%A2%98/" target="_self">
           CF刷题-图论
         </a>
-      </h1>
+      </h2>
 
-      <a class="index-excerpt" href="/2022/05/02/CF%E5%9B%BE%E8%AE%BA%E5%88%B7%E9%A2%98/" target="_self">
+      
+      <a class="index-excerpt " href="/2022/05/02/CF%E5%9B%BE%E8%AE%BA%E5%88%B7%E9%A2%98/" target="_self">
         <div>
           
-          格式： 题目(考点)链接) 思路： ……………………………………………… 代码： 123456789#include &lt;iostream&gt;using namespace std;int main()&amp;#123;    return 0;&amp;#125;
         </div>
       </a>
 
@@ -610,16 +667,16 @@
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/2022/04/30/%E6%95%B0%E5%AD%A6%E8%AE%A1%E7%AE%97/" target="_self">
           数学计算
         </a>
-      </h1>
+      </h2>
 
-      <a class="index-excerpt" href="/2022/04/30/%E6%95%B0%E5%AD%A6%E8%AE%A1%E7%AE%97/" target="_self">
+      
+      <a class="index-excerpt " href="/2022/04/30/%E6%95%B0%E5%AD%A6%E8%AE%A1%E7%AE%97/" target="_self">
         <div>
-          
           题目
         </div>
       </a>
@@ -658,17 +715,17 @@
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/2022/04/27/%E5%B7%AE%E5%88%86%E7%BA%A6%E6%9D%9F/" target="_self">
           差分约束
         </a>
-      </h1>
+      </h2>
 
-      <a class="index-excerpt" href="/2022/04/27/%E5%B7%AE%E5%88%86%E7%BA%A6%E6%9D%9F/" target="_self">
+      
+      <a class="index-excerpt " href="/2022/04/27/%E5%B7%AE%E5%88%86%E7%BA%A6%E6%9D%9F/" target="_self">
         <div>
           
-          例一题目 根据题目，小朋友们的要求构成了不等式关系，先写出这些要求对应的不等式关系  但只有这些只能判断出每个小朋友之间的相对关系 题目中要求每个小朋友都要分到糖果，说明最少是1 建立一个超级源点，此时条件全部满足 代码如下：这题使用栈判断负环更快 123456789101112131415161718192021222324252627282930313233343536373839404
         </div>
       </a>
 
@@ -731,94 +788,11 @@
     </article>
   </div>
 
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/2022/04/25/%E6%9C%89%E5%90%91%E5%9B%BE%E7%9A%84%E5%BC%BA%E8%BF%9E%E9%80%9A%E5%88%86%E9%87%8F/" target="_self">
-          <img src="/img/post_cover/icpc.jpeg" srcset="/img/loading.gif" lazyload alt="有向图的强连通分量">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2022/04/25/%E6%9C%89%E5%90%91%E5%9B%BE%E7%9A%84%E5%BC%BA%E8%BF%9E%E9%80%9A%E5%88%86%E9%87%8F/" target="_self">
-          有向图的强连通分量
-        </a>
-      </h1>
-
-      <a class="index-excerpt" href="/2022/04/25/%E6%9C%89%E5%90%91%E5%9B%BE%E7%9A%84%E5%BC%BA%E8%BF%9E%E9%80%9A%E5%88%86%E9%87%8F/" target="_self">
-        <div>
-          
-          例一(受欢迎的牛)题目  123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990#include &lt;i
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2022-04-25 20:46" pubdate>
-              2022-04-25
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/%E7%AE%97%E6%B3%95/" class="category-chain-item">算法</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/%E7%AE%97%E6%B3%95/%E5%9B%BE%E8%AE%BA/" class="category-chain-item">图论</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/%E7%AE%97%E6%B3%95/%E5%9B%BE%E8%AE%BA/%E5%BC%BA%E8%BF%9E%E9%80%9A%E5%88%86%E9%87%8F/" class="category-chain-item">强连通分量</a>
-  
-  
-
-  
-
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/%E5%9B%BE%E8%AE%BA/">#图论</a>
-            
-              <a href="/tags/%E5%BC%BA%E8%BF%9E%E9%80%9A%E5%88%86%E9%87%8F/">#强连通分量</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
 
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/page/3/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/#board">2</a><a class="page-number" href="/page/3/#board">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/#board">5</a><a class="page-number" href="/page/6/#board">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/#board">13</a><a class="extend next" rel="next" href="/page/5/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/page/3/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/#board">2</a><a class="page-number" href="/page/3/#board">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/#board">5</a><a class="page-number" href="/page/6/#board">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/#board">14</a><a class="extend next" rel="next" href="/page/5/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 
@@ -892,7 +866,7 @@
   </script>
 
 
-<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
 <script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
 <script  src="/js/events.js" ></script>
 <script  src="/js/plugins.js" ></script>
@@ -912,8 +886,6 @@
       
     })(window, document);
   </script>
-
-
 
 
 
