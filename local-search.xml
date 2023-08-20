@@ -4,72 +4,23 @@
   
   
   <entry>
-    <title>操作系统-并发</title>
-    <link href="/2023/07/21/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-%E5%B9%B6%E5%8F%91/"/>
-    <url>/2023/07/21/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-%E5%B9%B6%E5%8F%91/</url>
+    <title>写文章计划</title>
+    <link href="/2023/08/20/%E5%86%99%E6%96%87%E7%AB%A0%E8%AE%A1%E5%88%92/"/>
+    <url>/2023/08/20/%E5%86%99%E6%96%87%E7%AB%A0%E8%AE%A1%E5%88%92/</url>
     
-    <content type="html"><![CDATA[<h2 id="条件变量"><a href="#条件变量" class="headerlink" title="条件变量"></a>条件变量</h2><h3 id="条件变量互斥锁"><a href="#条件变量互斥锁" class="headerlink" title="条件变量互斥锁"></a>条件变量互斥锁</h3><h2 id="信号量"><a href="#信号量" class="headerlink" title="信号量"></a>信号量</h2><h3 id="信号量编写互斥锁"><a href="#信号量编写互斥锁" class="headerlink" title="信号量编写互斥锁"></a>信号量编写互斥锁</h3>]]></content>
+    <content type="html"><![CDATA[<h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><p>之前整的这个博客荒废了很长时间，一直都没写什么，前几天看了一篇文章<a href="https://addyosmani.com/blog/write-learn/">Write about what you learn. It pushes you to understand topics better.</a>，觉得很有道理，所以想坚持写一些文章吧，还能锻炼锻炼写作能力。</p><h2 id="计划"><a href="#计划" class="headerlink" title="计划"></a>计划</h2><p>一周一篇学习感悟吧，随便写写啥的，最好写长一点吧。</p>]]></content>
     
     
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>计算机组成原理复习</title>
-    <link href="/2023/06/11/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E5%A4%8D%E4%B9%A0/"/>
-    <url>/2023/06/11/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E5%A4%8D%E4%B9%A0/</url>
-    
-    <content type="html"><![CDATA[<h2 id="指令系统"><a href="#指令系统" class="headerlink" title="指令系统"></a>指令系统</h2><blockquote><p>思考问题：<br>什么是指令？什么是指令系统？为什么有指令系统？<br>指令系统分为哪些部分？每部分的作用？<br>寻址方式的多少有什么影响</p></blockquote><h3 id="拓展操作码指令"><a href="#拓展操作码指令" class="headerlink" title="拓展操作码指令"></a>拓展操作码指令</h3><p>设地址长度为$n$，上一层留出$m$种状态，下一层可拓展出$m \times 2 ^{n}$种状态。</p><p>例：</p><p>(todo)</p><h3 id="指令寻址"><a href="#指令寻址" class="headerlink" title="指令寻址"></a>指令寻址</h3><h2 id="CPU内部结构"><a href="#CPU内部结构" class="headerlink" title="CPU内部结构"></a>CPU内部结构</h2>]]></content>
-    
+    <categories>
+      
+      <category>计划</category>
+      
+    </categories>
     
     
     <tags>
       
-      <tag>计组</tag>
-      
-      <tag>复习</tag>
-      
-      <tag>自用</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>汇编语言</title>
-    <link href="/2023/03/01/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/"/>
-    <url>/2023/03/01/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/</url>
-    
-    <content type="html"><![CDATA[<h2 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h2><h3 id="汇编语言的组成"><a href="#汇编语言的组成" class="headerlink" title="汇编语言的组成"></a>汇编语言的组成</h3><p>三类指令</p><ol><li>汇编指令:机器码的助记符，有对应的机器码。</li><li>伪指令:没有对应的机器码，由编译器执行,计算机并不执行。</li><li>其他符号:如+、一、*、&#x2F;等，由编译器识别，没有对应的机器码。</li></ol><p>汇编语言的核心是汇编指令，它决定了汇编语言的特性。</p><h3 id="CPU的读写"><a href="#CPU的读写" class="headerlink" title="CPU的读写"></a>CPU的读写</h3><p>CPU要想进行数据的读写，必须和外部器件(标准的说法是芯片)进行下面3类信息的交互。</p><ul><li>存储单元的地址(地址信息);</li><li>器件的选择，读或写的命令(控制信息);</li><li>读或写的数据(数据信息)。</li></ul><h2 id="寄存器"><a href="#寄存器" class="headerlink" title="寄存器"></a>寄存器</h2><h3 id="16位结构的CPU"><a href="#16位结构的CPU" class="headerlink" title="16位结构的CPU"></a>16位结构的CPU</h3><ul><li>运算器一次最多可以处理16位的数据;</li><li>寄存器的最大宽度为16位;</li><li>寄存器和运算器之间的通路为16位。</li></ul><h3 id="物理地址"><a href="#物理地址" class="headerlink" title="物理地址"></a>物理地址</h3><p>地址加法器采用<code>物理地址=段地址×16+偏移地址</code>的方法用段地址和偏移地址合成物理地址</p><h4 id="本质含义"><a href="#本质含义" class="headerlink" title="本质含义"></a>本质含义</h4><p><strong>基础地址+偏移地址</strong>&#x3D;物理地址</p><p>8086CPU的工作过程可以简要描述如下。</p><p>(1)从CS:IP指向的内存单元读取指令，读取的指令进入指令缓冲器;<br>(2)IP&#x3D;IP+所读取指令的长度，从而指向下一条指令;<br>(3)执行指令。转到步骤(l)，重复这个过程。</p><p>CS和IP的重要性，它们的内容提供了CPU 要执行指令的地址。<br>如果说，内存中的一段信息曾被CPU执行过的话，那么，它所在的内存单元必然被CS:IP指向过。</p><p>同时修改CS、IP的内容，可用形如“jmp段地址:偏移地址”的指令完成<br>仅修改IP的内容，可用形如“jmp 某一合法寄存器”的指令完成,指令的功能为:用寄存器中的值修改IP。</p>]]></content>
-    
-    
-    
-    <tags>
-      
-      <tag>学习笔记</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>GDB</title>
-    <link href="/2023/03/01/GDB/"/>
-    <url>/2023/03/01/GDB/</url>
-    
-    <content type="html"><![CDATA[<h2 id="GDB基本命令和操作"><a href="#GDB基本命令和操作" class="headerlink" title="GDB基本命令和操作"></a>GDB基本命令和操作</h2><p>单步执行进入你感兴趣的函数</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">step<br></code></pre></td></tr></table></figure><p>单步执行跳过你不感兴趣的函数(例如库函数)</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">skip -- Ignore a <span class="hljs-keyword">function</span> <span class="hljs-keyword">while</span> stepping.<br>skip <span class="hljs-keyword">function</span> -- Ignore a <span class="hljs-keyword">function</span> <span class="hljs-keyword">while</span> stepping.<br></code></pre></td></tr></table></figure><p>运行到函数末尾</p><p><code>finish</code>: Continue running until just after function in the selected stack frame returns. Print the returned value (if any). This command can be abbreviated as <code>fin</code>.</p><p>打印变量或寄存器的值</p><p>打印变量</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs gdb">print<br></code></pre></td></tr></table></figure><p>寄存器<br><code>info registers</code><br>    Print the names and values of all registers except floating-point and vector registers (in the selected stack frame).<br><code>info all-registers</code><br>    Print the names and values of all registers, including floating-point and vector registers (in the selected stack frame).<br><code>info registers reggroup …</code><br>    Print the name and value of the registers in each of the specified reggroups. The reggroup can be any of those returned by maint print reggroups (see Maintenance Commands).<br><code>info registers regname …</code><br>    Print the relativized value of each specified register regname. As discussed in detail below, register values are normally relative to the selected stack frame. The regname may be any register name valid on the machine you are using, with or without the initial ‘$’.</p><p><a href="https://sourceware.org/gdb/current/onlinedocs/gdb#Registers">more infomation</a></p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell">print &lt;var name to print&gt;<br>set &lt;var&gt; = &lt;value&gt;<br></code></pre></td></tr></table></figure><p>扫描内存</p><p>查看调用栈</p><p>设置断点</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">break</span> -- Set breakpoint at specified location.<br>break-range -- Set a breakpoint <span class="hljs-keyword">for</span> an address range.<br></code></pre></td></tr></table></figure><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">break</span> &lt;<span class="hljs-built_in">source</span> code line number&gt;<br></code></pre></td></tr></table></figure><p>设置监视点</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs gdb">start -- Start the debugged program stopping at the beginning of the main procedure.<br>starti -- Start the debugged program stopping at the first instruction.<br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-    
-    <tags>
-      
-      <tag>gdb</tag>
+      <tag>计划</tag>
       
     </tags>
     
@@ -91,25 +42,6 @@
   
   
   <entry>
-    <title>🐢棋</title>
-    <link href="/2022/12/02/%F0%9F%90%A2%E6%A3%8B/"/>
-    <url>/2022/12/02/%F0%9F%90%A2%E6%A3%8B/</url>
-    
-    <content type="html"><![CDATA[<p><a href="https://www.acwing.com/problem/content/314/">题目</a></p>]]></content>
-    
-    
-    
-    <tags>
-      
-      <tag>动态规划</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>ABC267</title>
     <link href="/2022/11/15/ABC267/"/>
     <url>/2022/11/15/ABC267/</url>
@@ -121,25 +53,6 @@
     <tags>
       
       <tag>ABC</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>CSAPP读书笔记</title>
-    <link href="/2022/11/08/CSAPP%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    <url>/2022/11/08/CSAPP%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</url>
-    
-    <content type="html"><![CDATA[<p>练习题3-3：</p><figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs mel">movb $0xF, (%ebx)<br></code></pre></td></tr></table></figure><p>32位的寄存器不能当成地址寄存器<br>需要使用64位</p><figure class="highlight cos"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs cos">movl <span class="hljs-built_in">%rax</span>, (<span class="hljs-built_in">%rsp</span>)<br>movb <span class="hljs-built_in">%si</span>, <span class="hljs-number">8</span>(<span class="hljs-built_in">%rbp</span>)<br></code></pre></td></tr></table></figure><p>操作符后缀错误</p><figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs mel">movl %eax,%rdx destination operand incorrect <span class="hljs-keyword">size</span><br></code></pre></td></tr></table></figure><p>相对于目标地址，l操作的位数小了</p>]]></content>
-    
-    
-    
-    <tags>
-      
-      <tag>CSAPP</tag>
       
     </tags>
     
@@ -174,27 +87,6 @@
     <content type="html"><![CDATA[<h2 id="虚拟机配置"><a href="#虚拟机配置" class="headerlink" title="虚拟机配置"></a>虚拟机配置</h2><h3 id="中文输入法"><a href="#中文输入法" class="headerlink" title="中文输入法"></a>中文输入法</h3><h3 id="代理"><a href="#代理" class="headerlink" title="代理"></a>代理</h3><p>ubuntu的网络代理配置上当前cmd中VM8的IP和clash中的端口</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">export</span> -p<br></code></pre></td></tr></table></figure><p>查看全局环境变量</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">export</span> hostip=$(<span class="hljs-built_in">cat</span> /etc/resolv.conf |grep -oP <span class="hljs-string">&#x27;(?&lt;=nameserver\ ).*&#x27;</span>)<br><span class="hljs-built_in">export</span> https_proxy=<span class="hljs-string">&quot;http://<span class="hljs-variable">$&#123;hostip&#125;</span>:7890&quot;</span>;<br><span class="hljs-built_in">export</span> http_proxy=<span class="hljs-string">&quot;http://<span class="hljs-variable">$&#123;hostip&#125;</span>:7890&quot;</span>;<br></code></pre></td></tr></table></figure><p>配置代理</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">unset</span> http_proxy<br><span class="hljs-built_in">unset</span> https_proxy<br></code></pre></td></tr></table></figure><p>取消代理</p><h3 id="PA1"><a href="#PA1" class="headerlink" title="PA1"></a>PA1</h3><h4 id="表达式求值"><a href="#表达式求值" class="headerlink" title="表达式求值"></a>表达式求值</h4>]]></content>
     
     
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>vim</title>
-    <link href="/2022/10/09/vim-0/"/>
-    <url>/2022/10/09/vim-0/</url>
-    
-    <content type="html"><![CDATA[<p>可快速进行教程</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">vimtutor<br></code></pre></td></tr></table></figure><p>The cursor is moved using either the arrow keys or the hjkl keys.</p><p>h (left)j(down)k(up)l(right)</p><p>删除单个字符<code>x</code></p><p>插入输入<code>i</code></p><p>追加内容使用<code>a</code></p>]]></content>
-    
-    
-    
-    <tags>
-      
-      <tag>vim</tag>
-      
-      <tag>linux</tag>
-      
-    </tags>
     
   </entry>
   
