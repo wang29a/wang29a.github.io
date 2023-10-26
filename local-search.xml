@@ -4,11 +4,30 @@
   
   
   <entry>
-    <title>rcore-学习记录-CH3</title>
-    <link href="/2023/10/25/rcore-blog/"/>
-    <url>/2023/10/25/rcore-blog/</url>
+    <title>rcore学习记录</title>
+    <link href="/2023/10/26/rcore-learning-record/"/>
+    <url>/2023/10/26/rcore-learning-record/</url>
     
-    <content type="html"><![CDATA[<h2 id="实验任务"><a href="#实验任务" class="headerlink" title="实验任务"></a>实验任务</h2><ol><li>当前任务的状态</li><li>当前任务据第一次执行的时间</li><li>当前任务产生的各个系统调用次数</li></ol>]]></content>
+    <content type="html"><![CDATA[<p>10.23-10.26</p><p>前面准备</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>rcore</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>rcore-学习记录-CH3</title>
+    <link href="/2023/10/25/rcore-ch3/"/>
+    <url>/2023/10/25/rcore-ch3/</url>
+    
+    <content type="html"><![CDATA[<h2 id="实验任务"><a href="#实验任务" class="headerlink" title="实验任务"></a>实验任务</h2><ol><li>当前任务的状态</li><li>当前任务据第一次执行的时间</li><li>当前任务产生的各个系统调用次数</li></ol><h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>在<code>src/syscall/mod.rs</code>文件中新加入一个全局变量<code>TASK_INFO</code>，一个裸指针，指向当前的TaskInfo变量。</p><p>在<code>src/task/task.rs</code>中的<code>TaskControlBlock</code>加入TaskInfo，当一个task没有调用syscall_task_info时，TaksInfo存储在这里，当发生任务切换的时候，也会保存</p><h3 id="当前任务状态"><a href="#当前任务状态" class="headerlink" title="当前任务状态"></a>当前任务状态</h3><p>一直为<code>Running</code></p><p>简简单单</p><h3 id="时间"><a href="#时间" class="headerlink" title="时间"></a>时间</h3><p>直接<code>get_time_ms()</code>更新</p><h3 id=""><a href="#" class="headerlink" title=""></a></h3><p>在执行系统调用之前，将数组中的值更新</p>]]></content>
     
     
     
