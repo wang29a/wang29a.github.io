@@ -4,11 +4,30 @@
   
   
   <entry>
+    <title>rcore-学习记录-CH4</title>
+    <link href="/2023/10/28/rcore-ch4/"/>
+    <url>/2023/10/28/rcore-ch4/</url>
+    
+    <content type="html"><![CDATA[<h2 id="实验任务"><a href="#实验任务" class="headerlink" title="实验任务"></a>实验任务</h2><ol><li>重新实现<code>sys_get_time</code></li><li>重新实现<code>sys_task_info</code></li><li>mmap()</li><li>munmap()</li></ol><h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><h3 id="sys-get-time-amp-amp-sys-task-info"><a href="#sys-get-time-amp-amp-sys-task-info" class="headerlink" title="sys_get_time &amp;&amp; sys_task_info"></a>sys_get_time &amp;&amp; sys_task_info</h3><p>因为分页机制的出现，内核代码不能直接访问用户的数据</p><p><del>我的想法是找到这个数据对应的物理页，存入内核的页表中</del></p><p><del>这样就可以访问用户的数据，在返回前删除当前页表项</del></p><p>不用那么麻烦，直接获得物理地址，因为内核的地址是恒等映射，可以直接通过物理地址访问</p><h3 id="mmap-amp-amp-munmap"><a href="#mmap-amp-amp-munmap" class="headerlink" title="mmap &amp;&amp; munmap"></a>mmap &amp;&amp; munmap</h3><p>关键问题，怎样获取一个当前未使用的VP和PP</p><p>有了之后可以直接通过<code>page_table</code>的<code>map</code>直接映射</p><p>在<code>memory_set</code>已有的代码基础上添加一些细节</p><h2 id="简答题目"><a href="#简答题目" class="headerlink" title="简答题目"></a>简答题目</h2>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>rcore</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>rcore学习记录</title>
     <link href="/2023/10/26/rcore-learning-record/"/>
     <url>/2023/10/26/rcore-learning-record/</url>
     
-    <content type="html"><![CDATA[<p>10.23-10.26</p><p>前面准备</p>]]></content>
+    <content type="html"><![CDATA[<p>10.23-10.26</p><p>前面准备</p><p>10.24</p><p>看ch2的框架</p><p>10.25</p><p>熟悉了ch3的代码框架，对任务进行了几次尝试，最后确定了一种实现，写了一半的代码</p><p>10.26</p><p>接着昨天完成了ch3，但是感觉完成的有点问题</p><p>补了学习记录</p><p>10.27</p><p>ch4文档</p><p>10.28</p><p>ch4文档代码</p><p>rcore中地址空间的运行原理</p><p>下午完成了<code>sys_get_time</code>、<code>sys_task_info</code></p><p>晚上写了剩下的ch4，但是功能不完善</p><p>10.29</p><p>上午继续修改<code>mmap</code>、<code>munmap</code>的代码</p>]]></content>
     
     
     
