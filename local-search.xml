@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>rcore-学习记录-ch5</title>
+    <link href="/2023/10/29/rcore-ch5/"/>
+    <url>/2023/10/29/rcore-ch5/</url>
+    
+    <content type="html"><![CDATA[<h2 id="实验任务"><a href="#实验任务" class="headerlink" title="实验任务"></a>实验任务</h2><ol><li>spwan 系统调用</li><li>stride 调度算法</li></ol><h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><h3 id="spwan系统调用"><a href="#spwan系统调用" class="headerlink" title="spwan系统调用"></a>spwan系统调用</h3><p>根据已有的<code>fork</code>、<code>exec</code>，写出符合<code>sys_spwan</code>系统调用的<code>spwan</code>函数</p><h3 id="stride-调度算法"><a href="#stride-调度算法" class="headerlink" title="stride 调度算法"></a>stride 调度算法</h3><p>在<code>run_task</code>更新马上要执行任务的<code>stride</code></p><p><code>fetch_task()</code>中选择当前最小stride的任务</p><h2 id="简答题目"><a href="#简答题目" class="headerlink" title="简答题目"></a>简答题目</h2>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>rcore</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>rcore-学习记录-CH4</title>
     <link href="/2023/10/28/rcore-ch4/"/>
     <url>/2023/10/28/rcore-ch4/</url>
@@ -27,7 +46,7 @@
     <link href="/2023/10/26/rcore-learning-record/"/>
     <url>/2023/10/26/rcore-learning-record/</url>
     
-    <content type="html"><![CDATA[<p>10.23-10.26</p><p>前面准备</p><p>10.24</p><p>看ch2的框架</p><p>10.25</p><p>熟悉了ch3的代码框架，对任务进行了几次尝试，最后确定了一种实现，写了一半的代码</p><p>10.26</p><p>接着昨天完成了ch3，但是感觉完成的有点问题</p><p>补了学习记录</p><p>10.27</p><p>ch4文档</p><p>10.28</p><p>ch4文档代码</p><p>rcore中地址空间的运行原理</p><p>下午完成了<code>sys_get_time</code>、<code>sys_task_info</code></p><p>晚上写了剩下的ch4，但是功能不完善</p><p>10.29</p><p>上午继续修改<code>mmap</code>、<code>munmap</code>的代码</p>]]></content>
+    <content type="html"><![CDATA[<p>10.23-10.26</p><p>前面准备</p><p>10.24</p><p>看ch2的框架</p><p>10.25</p><p>熟悉了ch3的代码框架，对任务进行了几次尝试，最后确定了一种实现，写了一半的代码</p><p>10.26</p><p>接着昨天完成了ch3，但是感觉完成的有点问题</p><p>补了学习记录</p><p>10.27</p><p>ch4文档</p><p>10.28</p><p>ch4文档代码</p><p>rcore中地址空间的运行原理</p><p>下午完成了<code>sys_get_time</code>、<code>sys_task_info</code></p><p>晚上写了剩下的ch4，但是功能不完善</p><p>10.29</p><p>上午继续修改<code>mmap</code>、<code>munmap</code>的代码</p><p>继续看ch5文档</p><p>10.30</p><p>完成spwan</p><p>通过<code>git cherry-pick</code>，合并ch4完成的<code>mmap</code>、<code>munmap</code>、&#96;&#96;</p>]]></content>
     
     
     
